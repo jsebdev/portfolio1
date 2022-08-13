@@ -66,7 +66,7 @@ export const NavItemS = styled.li`
       : ''};
 `;
 
-export const LinkS = styled(Link)`
+export const LinkHeaderS = styled(Link)`
   text-decoration: none;
   color: ${(props) => props.theme.fontColor};
 `;

@@ -44,6 +44,10 @@ export const lightTheme = {
   spanDescriptor: themeColors.gray,
   imageShadow: `${themeColors.gray}`,
   sectionHeaderBorderBottom: themeColors.green,
+  inputBorder: `1px solid ${themeColors.gray}`,
+  inputBackground: themeColors.white,
+  inputPlaceholder: themeColors.gray,
+  socialName: themeColors.green,
 };
 
 export const darkTheme = {
@@ -76,4 +80,8 @@ export const darkTheme = {
   spanDescriptor: themeColors.gray,
   imageShadow: `${themeColors.lightBlue}60`,
   sectionHeaderBorderBottom: themeColors.green,
+  inputBorder: 'none',
+  inputBackground: themeColors.lessDarkBlue,
+  inputPlaceholder: themeColors.lightBlue,
+  socialName: themeColors.green,
 };

@@ -18,10 +18,10 @@ export const ContactSection = () => {
         <SectionTitleS message='sectionTitle'>Contact</SectionTitleS>
       </SectionHeaderS>
       <ContactContentS>
+        <ContactForm />
         <ContactImageContainerS>
           <ContactImageS src='images/about0.jpg' alt='' />
         </ContactImageContainerS>
-        <ContactForm />
       </ContactContentS>
     </TitledSectionS>
   );

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const MainButton = styled.button`
+export const MainButtonS = styled.button`
   padding-inline: 0.6rem;
   padding-block: 0.4rem;
   background-color: ${(props) => props.theme.mainButton};

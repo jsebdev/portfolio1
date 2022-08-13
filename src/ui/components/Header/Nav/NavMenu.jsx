@@ -1,7 +1,7 @@
 import React from 'react';
 import { desktopMenu } from '../../../helpers/strings';
 import {
-  LinkS,
+  LinkHeaderS,
   NavItemS,
   NavMenuContainerS,
   NavMenuS,
@@ -16,21 +16,21 @@ export const NavMenu = ({
     <NavMenuContainerS type={type} active={active}>
       <NavMenuS type={type}>
         <NavItemS type={type}>
-          <LinkS onClick={closeMenu} to='about'>
+          <LinkHeaderS onClick={closeMenu} to='about'>
             About
-          </LinkS>
+          </LinkHeaderS>
         </NavItemS>
         <NavItemS type={type}>Resume</NavItemS>
         <NavItemS type={type}>
-          <LinkS onClick={closeMenu} to='work'>
+          <LinkHeaderS onClick={closeMenu} to='work'>
             Projects
-          </LinkS>
+          </LinkHeaderS>
         </NavItemS>
         {/* <NavItemS>Lessons</NavItemS> */}
         <NavItemS type={type}>
-          <LinkS onClick={closeMenu} to='contact'>
+          <LinkHeaderS onClick={closeMenu} to='contact'>
             Contact
-          </LinkS>
+          </LinkHeaderS>
         </NavItemS>
       </NavMenuS>
     </NavMenuContainerS>
