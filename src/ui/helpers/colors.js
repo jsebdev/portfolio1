@@ -6,6 +6,7 @@ export const themeColors = {
   blue: '#2C85EE',
   lightBlue: '#C5DFFE',
   gray: '#C4C4C4',
+  darkGray: '#939393',
   purple: '#9F11D0',
   lightPurple: '#EBB0FF',
   white: '#FDFDFD',

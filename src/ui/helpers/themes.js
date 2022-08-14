@@ -41,7 +41,7 @@ export const lightTheme = {
   mainButtonText: themeColors.white,
   mainButtonBorder: themeColors.lightGreen,
   shadowBox: themeColors.gray,
-  spanDescriptor: themeColors.gray,
+  spanDescriptor: themeColors.darkGray,
   imageShadow: `${themeColors.gray}`,
   sectionHeaderBorderBottom: themeColors.green,
   inputBorder: `1px solid ${themeColors.gray}`,

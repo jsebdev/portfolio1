@@ -10,7 +10,7 @@ export const AboutContentS = styled.div`
     props.changeToRow
       ? `
         @media (${mediaQueries.tablet}) {
-          flex-direction: ${props.direction2};
+          flex-direction: ${props.directionTablet};
         }
   `
       : ''}
@@ -32,6 +32,7 @@ export const AboutImageContainerS = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   margin-bottom: 2rem;
   ${(props) =>
     props.changeToRow
@@ -56,5 +57,9 @@ export const AboutImageS = styled.img`
     `${props.theme.shadowBoxPosition} ${props.theme.imageShadow}`};
   @media (${mediaQueries.tablet}) {
     width: 100%;
+    ${(props) =>
+      props.aspectRatioTablet
+        ? `aspect-ratio: ${props.aspectRatioTablet};`
+        : ''}
   }
 `;

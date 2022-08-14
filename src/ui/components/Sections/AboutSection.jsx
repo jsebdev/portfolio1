@@ -19,6 +19,10 @@ export const AboutSection = () => {
     () => aboutImages[Math.floor(Math.random() * aboutImages.length)],
     [],
   );
+  // const image = aboutImages.filter((img) =>
+  //   img.description.includes('Awesome'),
+  // )[0];
+  // const image = aboutImages[8];
 
   return (
     <TitledSectionS>
@@ -66,7 +70,7 @@ export const AboutSection = () => {
           </ParagraphS>
         </AboutText>
         <AboutImageContainerS changeToRow={image.changeToRow}>
-          <AboutImageS {...image} src={`images/${image.image}`} alt='' />
+          <AboutImageS {...image} src={`images/about/${image.image}`} alt='' />
           <SpanDescriptorS>{image.description}</SpanDescriptorS>
         </AboutImageContainerS>
       </AboutContentS>

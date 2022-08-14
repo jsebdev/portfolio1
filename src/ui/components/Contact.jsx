@@ -24,7 +24,7 @@ export const Contact = () => {
           id=''
           cols='30'
           rows='8'
-          placeholder='message'
+          placeholder='Message'
         ></AreaInputFormS>
         <FormButtonS width='fit-content'> Send </FormButtonS>
       </ContactFormS>

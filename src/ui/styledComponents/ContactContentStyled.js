@@ -34,11 +34,10 @@ export const ContactFormS = styled.form`
 export const InputFormS = styled.input`
   color: ${(props) => props.theme.fontColor};
   margin-block: 0.5rem;
-  padding: 0.2rem;
+  padding: 0.6rem;
   padding-left: 0.7rem;
   border: ${(props) => props.theme.inputBorder};
   border-radius: 0.5rem;
-  min-height: 2.5rem;
   background: ${(props) => props.theme.inputBackground};
   box-shadow: ${(props) =>
     `${props.theme.shadowBoxPosition} ${props.theme.imageShadow}`};
