@@ -21,6 +21,8 @@ export const ContactImageContainerS = styled.div`
 
 export const ContactImageS = styled.img`
   width: 100%;
+  box-shadow: ${(props) =>
+    `${props.theme.shadowBoxPosition} ${props.theme.imageShadow}`};
 `;
 
 export const ContactFormS = styled.form`
