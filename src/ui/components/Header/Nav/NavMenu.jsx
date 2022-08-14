@@ -20,7 +20,11 @@ export const NavMenu = ({
             About
           </LinkHeaderS>
         </NavItemS>
-        <NavItemS type={type}>Resume</NavItemS>
+        <NavItemS type={type}>
+          <LinkHeaderS onClick={closeMenu} to='files/cv.pdf' target='_blank'>
+            Resume
+          </LinkHeaderS>
+        </NavItemS>
         <NavItemS type={type}>
           <LinkHeaderS onClick={closeMenu} to='work'>
             Projects
