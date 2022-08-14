@@ -22,7 +22,7 @@ export const HelloSection = () => {
         </ParagraphS>
       </HiMessagesS>
       <ProfileImageContainerS>
-        <ProfileImageS src='/images/perfil.jpg' alt='' />
+        <ProfileImageS src='images/perfil.jpg' alt='' />
       </ProfileImageContainerS>
     </HelloSectionS>
   );

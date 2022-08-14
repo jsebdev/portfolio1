@@ -1,7 +1,7 @@
 export const projectList = [
   {
     id: 'order_manager',
-    thumbnail: 'order_manager.png',
+    thumbnail: 'order_manager.PNG',
     name: 'Order Manager',
     description: 'Web app for handling order for retail companies',
   },
