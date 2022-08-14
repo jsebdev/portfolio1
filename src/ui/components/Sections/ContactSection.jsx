@@ -9,7 +9,7 @@ import {
   TitledSectionS,
 } from '../../styledComponents/SectionStyled';
 import { SectionTitleS } from '../../styledComponents/TitleStyled';
-import { ContactForm } from '../ContactForm';
+import { Contact } from '../Contact';
 
 export const ContactSection = () => {
   return (
@@ -18,7 +18,7 @@ export const ContactSection = () => {
         <SectionTitleS message='sectionTitle'>Contact</SectionTitleS>
       </SectionHeaderS>
       <ContactContentS>
-        <ContactForm />
+        <Contact />
         <ContactImageContainerS>
           <ContactImageS src='images/about0.jpg' alt='' />
         </ContactImageContainerS>

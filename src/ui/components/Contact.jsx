@@ -11,7 +11,7 @@ import {
 } from 'ui/styledComponents/ContactContentStyled';
 import { ParagraphS } from 'ui/styledComponents/paragraphStyled';
 
-export const ContactForm = () => {
+export const Contact = () => {
   return (
     <div>
       <ParagraphS>You can always reach me, I’ll be happy to answer</ParagraphS>
@@ -39,7 +39,7 @@ export const ContactForm = () => {
             <SocialNameS>LinkedIn:</SocialNameS> @sebscaicedo
           </SocialLinkS>
           <SocialLinkS
-            href='https://www.linkedin.com/in/sebscaicedo/'
+            href='https://twitter.com/Sebas93cay'
             rel='noreferrer'
             target='_blank'
           >

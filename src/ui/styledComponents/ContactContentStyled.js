@@ -69,6 +69,7 @@ export const SocialLinkS = styled.a`
   text-align: center;
   text-decoration: none;
   color: ${(props) => props.theme.fontColor};
+  margin-block: 0.6rem;
 `;
 
 export const SocialNameS = styled.span`
