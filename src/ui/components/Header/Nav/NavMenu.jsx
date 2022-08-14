@@ -21,7 +21,12 @@ export const NavMenu = ({
           </LinkHeaderS>
         </NavItemS>
         <NavItemS type={type}>
-          <LinkHeaderS onClick={closeMenu} to='files/cv.pdf' target='_blank'>
+          <LinkHeaderS
+            onClick={closeMenu}
+            href='files/cv.pdf'
+            as='a'
+            target='_blank'
+          >
             Resume
           </LinkHeaderS>
         </NavItemS>
