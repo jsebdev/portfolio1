@@ -1,8 +1,6 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import { mediaQueries } from 'ui/helpers/measures';
 import { MainButtonS } from './ButtonsStyled';
-import { ParagraphS } from './paragraphStyled';
 
 export const ContactContentS = styled.div`
   display: flex;

@@ -1,5 +1,4 @@
 import React from 'react';
-import { MainButtonS } from 'ui/styledComponents/ButtonsStyled';
 import {
   AreaInputFormS,
   ContactFormS,

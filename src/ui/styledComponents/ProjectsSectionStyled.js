@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { mediaQueries } from '../helpers/measures';
-import { SectionS } from './SectionStyled';
 
 const thumbnailWidth = 40;
 

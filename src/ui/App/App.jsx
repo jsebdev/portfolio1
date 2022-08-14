@@ -4,7 +4,7 @@ import { ThemeProvider } from 'styled-components';
 import { Page } from '../components/Page/Page';
 import { GlobalStyles } from '../styledComponents/globarStyles';
 import { useSelector } from 'react-redux';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import { Home } from '../pages/Home';
 import { Work } from '../pages/Work';
 import { Contact } from '../pages/Contact';
@@ -13,6 +13,9 @@ import { NotFound } from '../pages/NotFound';
 
 function App() {
   const theme = useSelector((state) => state.theme.value);
+  const location = useLocation();
+
+  console.log('la location is ', location);
 
   return (
     <ThemeProvider theme={theme}>
