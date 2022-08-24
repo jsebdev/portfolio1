@@ -1,12 +1,12 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { themesNames } from '../../../helpers/themes';
+import { themesNames } from '../../helpers/themes';
 import {
   MoonIcon,
   SunIcon,
   ThemeIconS,
-} from '../../../styledComponents/ThemeIconStyled';
-import { toggleTheme } from '../../../App/themeSlice';
+} from '../../styledComponents/ThemeIconStyled';
+import { toggleTheme } from '../../App/themeSlice';
 
 export const ThemeIcon = () => {
   const theme = useSelector((state) => state.theme.value);

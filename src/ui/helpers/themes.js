@@ -48,6 +48,7 @@ export const lightTheme = {
   inputBackground: themeColors.white,
   inputPlaceholder: themeColors.gray,
   socialName: themeColors.green,
+  separatorBorder: themeColors.gray,
 };
 
 export const darkTheme = {
@@ -84,4 +85,5 @@ export const darkTheme = {
   inputBackground: themeColors.lessDarkBlue,
   inputPlaceholder: themeColors.lightBlue,
   socialName: themeColors.green,
+  separatorBorder: themeColors.gray,
 };

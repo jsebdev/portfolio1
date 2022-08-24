@@ -11,6 +11,7 @@ export const HelloSectionS = styled(SectionS)`
     display: grid;
     grid-template-columns: 400px 1fr;
   }
+  margin-block-end: 4rem;
 `;
 
 export const HiMessagesS = styled.div`

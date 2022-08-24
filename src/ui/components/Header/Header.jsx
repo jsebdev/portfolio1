@@ -1,8 +1,8 @@
 import React from 'react';
-import { LogoName } from './LogoName/LogoName';
-import { Nav } from './Nav/Nav';
+import { LogoName } from '../LogoName';
+import { Nav } from '../Nav/Nav';
 import { HeaderS } from '../../styledComponents/HeaderStyled';
-import { ThemeIcon } from './ThemeIcon/ThemeIcon';
+import { ThemeIcon } from './ThemeIcon';
 
 export const Header = () => {
   return (

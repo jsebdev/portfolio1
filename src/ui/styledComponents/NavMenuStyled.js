@@ -4,14 +4,13 @@ import {
   dropDownMenuTransition,
   headerHovers,
 } from '../helpers/styleFunctions';
-import { dropDownMenu } from '../helpers/strings';
+import { DROP_DOWN_MENU, FOOTER, HEADER } from '../helpers/constants';
 import { FaTimes } from 'react-icons/fa';
+import { mediaQueries } from 'ui/helpers/measures';
 // import { shadowsMeasures } from 'ui/helpers/themes';
 
 export const NavMenuContainerS = styled.div`
-  ${(props) =>
-    props.type === dropDownMenu
-      ? `
+  &.${DROP_DOWN_MENU}  {
       ${dropDownMenuTransition}
       font-weight: bold;
       display: flex;
@@ -25,30 +24,36 @@ export const NavMenuContainerS = styled.div`
       flex-direction: column;
       align-items: flex-end;
       z-index: 2;
-      background: ${props.theme.dropDownMenu};
+      background: ${(props) => props.theme.dropDownMenu};
       border-radius: 10px;
-      border: 2px solid ${props.theme.dropDownMenuBorder};
-      box-shadow: ${`${props.theme.shadowBoxPosition} ${props.theme.dropDownMenuShadow};`}
+      border: 2px solid ${(props) => props.theme.dropDownMenuBorder};
+      box-shadow: ${(props) =>
+        `${props.theme.shadowBoxPosition} ${props.theme.dropDownMenuShadow};`}
       overflow: hidden;
       height: auto;
-      ${!props.active ? `top: -800%` : ''}
-      `
-      : ''};
+      ${(props) => (!props.active ? `top: -800%` : '')}
+  }
+  &.${FOOTER} {
+    display: none;
+    @media (${mediaQueries.desktop}) {
+      display: flex;
+    }
+  }
 `;
 
 export const NavMenuS = styled.ul`
   display: flex;
   list-style-type: none;
-  ${(props) =>
-    props.type === dropDownMenu
-      ? `
+  .${DROP_DOWN_MENU} & {
     width: 100%;
     flex-direction: column;
     align-items: center;
     z-index: 2;
     border-radius: 10px;
-    `
-      : ''};
+  }
+  .${FOOTER} & {
+    flex-direction: column;
+  }
 `;
 
 export const NavItemS = styled.li`
@@ -56,14 +61,13 @@ export const NavItemS = styled.li`
   padding: 5px 10px;
   margin-inline: 5px;
   text-align: center;
-  ${headerHovers}
-  ${(props) =>
-    props.type === dropDownMenu
-      ? `
-      margin-block: 10px;
-      width: 100%;
-    `
-      : ''};
+  .${HEADER} & {
+    ${headerHovers}
+  }
+  .${DROP_DOWN_MENU} & {
+    margin-block: 10px;
+    width: 100%;
+  }
 `;
 
 export const LinkHeaderS = styled(Link)`

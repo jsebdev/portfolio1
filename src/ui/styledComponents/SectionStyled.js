@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
-export const SectionS = styled.div`
-  margin-block-end: 4rem;
-`;
+export const SectionS = styled.div``;
 
 export const SectionHeaderS = styled.div`
   display: flex;

@@ -59,11 +59,11 @@ export const SocialDivS = styled.div`
   margin-block: 2rem;
 `;
 
-export const SocialLinksContainerS = styled.div`
+export const SocialLinksContactContainerS = styled.div`
   margin-block: 2rem;
 `;
 
-export const SocialLinkS = styled.a`
+export const SocialLinkContactS = styled.a`
   display: block;
   text-align: center;
   text-decoration: none;

@@ -5,8 +5,8 @@ import {
   FormButtonS,
   InputFormS,
   SocialDivS,
-  SocialLinkS,
-  SocialLinksContainerS,
+  SocialLinkContactS,
+  SocialLinksContactContainerS,
   SocialNameS,
 } from 'ui/styledComponents/ContactContentStyled';
 import { ParagraphS } from 'ui/styledComponents/paragraphStyled';
@@ -30,22 +30,22 @@ export const Contact = () => {
       </ContactFormS>
       <SocialDivS>
         <ParagraphS>Or you can reach me directly in my socials</ParagraphS>
-        <SocialLinksContainerS>
-          <SocialLinkS
+        <SocialLinksContactContainerS>
+          <SocialLinkContactS
             href='https://www.linkedin.com/in/sebscaicedo/'
             rel='noreferrer'
             target='_blank'
           >
             <SocialNameS>LinkedIn:</SocialNameS> @sebscaicedo
-          </SocialLinkS>
-          <SocialLinkS
+          </SocialLinkContactS>
+          <SocialLinkContactS
             href='https://twitter.com/Sebas93cay'
             rel='noreferrer'
             target='_blank'
           >
             <SocialNameS>Twitter:</SocialNameS> @Sebas93cay
-          </SocialLinkS>
-        </SocialLinksContainerS>
+          </SocialLinkContactS>
+        </SocialLinksContactContainerS>
       </SocialDivS>
     </div>
   );

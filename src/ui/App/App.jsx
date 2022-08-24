@@ -1,7 +1,7 @@
 import '../../styles.css';
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import { Page } from '../components/Page/Page';
+import { Page } from '../components/Page';
 import { GlobalStyles } from '../styledComponents/globarStyles';
 import { useSelector } from 'react-redux';
 import { Routes, Route, useLocation } from 'react-router-dom';

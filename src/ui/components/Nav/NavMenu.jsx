@@ -1,26 +1,28 @@
 import React from 'react';
-import { desktopMenu } from '../../../helpers/strings';
+import { DESKTOP_MENU, FOOTER, HEADER } from 'ui/helpers/constants';
 import {
   LinkHeaderS,
   NavItemS,
   NavMenuContainerS,
   NavMenuS,
-} from '../../../styledComponents/NavMenuStyled';
+} from '../../styledComponents/NavMenuStyled';
 
 export const NavMenu = ({
-  type = desktopMenu,
+  type = DESKTOP_MENU,
   active,
+  footer = false,
   closeMenu = () => {},
 }) => {
+  const classes = `${type} ${footer ? FOOTER : HEADER}`;
   return (
-    <NavMenuContainerS type={type} active={active}>
-      <NavMenuS type={type}>
-        <NavItemS type={type}>
+    <NavMenuContainerS className={classes} active={active}>
+      <NavMenuS>
+        <NavItemS>
           <LinkHeaderS onClick={closeMenu} to='about'>
             About
           </LinkHeaderS>
         </NavItemS>
-        <NavItemS type={type}>
+        <NavItemS>
           <LinkHeaderS
             onClick={closeMenu}
             href='files/cv.pdf'
@@ -30,13 +32,13 @@ export const NavMenu = ({
             Resume
           </LinkHeaderS>
         </NavItemS>
-        <NavItemS type={type}>
+        <NavItemS>
           <LinkHeaderS onClick={closeMenu} to='work'>
             Projects
           </LinkHeaderS>
         </NavItemS>
         {/* <NavItemS>Lessons</NavItemS> */}
-        <NavItemS type={type}>
+        <NavItemS>
           <LinkHeaderS onClick={closeMenu} to='contact'>
             Contact
           </LinkHeaderS>
