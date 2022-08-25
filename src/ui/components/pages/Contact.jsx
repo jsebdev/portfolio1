@@ -1,5 +1,5 @@
 import React from 'react';
-import { ContactSection } from '../components/Sections/ContactSection';
+import { ContactSection } from '../Sections/ContactSection';
 
 export const Contact = () => {
   return <ContactSection />;

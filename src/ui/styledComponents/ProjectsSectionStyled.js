@@ -7,6 +7,9 @@ export const ProjectsContainerS = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media (${mediaQueries.desktop}) {
+    padding-inline: 1.5rem;
+  }
 `;
 
 export const ProjectItemContainerS = styled.div`

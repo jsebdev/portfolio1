@@ -10,18 +10,24 @@ import { projectList } from '../../../Data/projects';
 import { ProjectItem } from '../ProjectItem';
 import { ProjectsContainerS } from '../../styledComponents/ProjectsSectionStyled';
 import { MainButtonS } from '../../styledComponents/ButtonsStyled';
+import { ParagraphS } from 'ui/styledComponents/paragraphStyled';
 
-export const ProjectsSection = () => {
+export const ProjectsSection = ({ featured = false }) => {
+  const projectsToShow = featured ? projectList.slice(0, 2) : projectList;
   return (
     <TitledSectionS>
       <SectionHeaderS>
-        <SectionTitleS message='sectionTitle'>Featured Projects</SectionTitleS>
-        <Link to='work'>
-          <MainButtonS>See All</MainButtonS>
-        </Link>
+        <SectionTitleS message='sectionTitle'>
+          {featured ? 'Featured Projects' : 'Projects'}
+        </SectionTitleS>
+        {featured && (
+          <Link to='work'>
+            <MainButtonS>See All</MainButtonS>
+          </Link>
+        )}
       </SectionHeaderS>
       <ProjectsContainerS>
-        {projectList.slice(0, 2).map((project, index) => (
+        {projectsToShow.map((project, index) => (
           <ProjectItem
             {...project}
             key={project.name}

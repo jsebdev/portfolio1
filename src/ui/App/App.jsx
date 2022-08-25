@@ -5,11 +5,11 @@ import { Page } from '../components/Page';
 import { GlobalStyles } from '../styledComponents/globarStyles';
 import { useSelector } from 'react-redux';
 import { Routes, Route, useLocation } from 'react-router-dom';
-import { Home } from '../pages/Home';
-import { Work } from '../pages/Work';
-import { Contact } from '../pages/Contact';
-import { About } from '../pages/About';
-import { NotFound } from '../pages/NotFound';
+import { Home } from '../components/pages/Home';
+import { Work } from '../components/pages/Work';
+import { Contact } from '../components/pages/Contact';
+import { About } from '../components/pages/About';
+import { NotFound } from '../components/pages/NotFound';
 
 function App() {
   const theme = useSelector((state) => state.theme.value);

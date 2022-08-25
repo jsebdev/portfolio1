@@ -1,5 +1,5 @@
 import React from 'react';
-import { AboutSection } from '../components/Sections/AboutSection';
+import { AboutSection } from '../Sections/AboutSection';
 
 export const About = () => {
   return <AboutSection />;
