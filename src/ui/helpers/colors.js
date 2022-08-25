@@ -9,6 +9,6 @@ export const themeColors = {
   darkGray: '#939393',
   purple: '#9F11D0',
   lightPurple: '#EBB0FF',
-  white: '#FDFDFD',
+  white: '#FFFFFF',
   black: '#000000',
 };

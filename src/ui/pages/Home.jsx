@@ -6,7 +6,7 @@ export const Home = () => {
   return (
     <>
       <HelloSection />
-      {/* <ProjectsSection /> */}
+      <ProjectsSection />
     </>
   );
 };

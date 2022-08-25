@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import {
   SectionHeaderS,
@@ -15,7 +16,9 @@ export const ProjectsSection = () => {
     <TitledSectionS>
       <SectionHeaderS>
         <SectionTitleS message='sectionTitle'>Featured Projects</SectionTitleS>
-        <MainButtonS>See All</MainButtonS>
+        <Link to='work'>
+          <MainButtonS>See All</MainButtonS>
+        </Link>
       </SectionHeaderS>
       <ProjectsContainerS>
         {projectList.slice(0, 2).map((project, index) => (

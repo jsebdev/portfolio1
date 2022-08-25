@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const MainButtonS = styled.button`
+  cursor: pointer;
   padding-inline: 0.6rem;
   padding-block: 0.4rem;
   background-color: ${(props) => props.theme.mainButton};

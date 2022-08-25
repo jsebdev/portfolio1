@@ -1,4 +1,5 @@
 import React from 'react';
+import { LINKEDIN_LINK, TWITTER_LINK } from 'ui/helpers/constants';
 import {
   AreaInputFormS,
   ContactFormS,
@@ -32,14 +33,14 @@ export const Contact = () => {
         <ParagraphS>Or you can reach me directly in my socials</ParagraphS>
         <SocialLinksContactContainerS>
           <SocialLinkContactS
-            href='https://www.linkedin.com/in/sebscaicedo/'
+            href={LINKEDIN_LINK}
             rel='noreferrer'
             target='_blank'
           >
             <SocialNameS>LinkedIn:</SocialNameS> @sebscaicedo
           </SocialLinkContactS>
           <SocialLinkContactS
-            href='https://twitter.com/Sebas93cay'
+            href={TWITTER_LINK}
             rel='noreferrer'
             target='_blank'
           >

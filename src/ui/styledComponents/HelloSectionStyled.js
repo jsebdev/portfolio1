@@ -37,6 +37,7 @@ export const ProfileImageS = styled(ImageS)`
   width: 100%;
   width: 300px;
   aspect-ratio: 1;
+  object-position: 80%;
   box-shadow: ${(props) =>
     `${props.theme.shadowBoxPosition} ${props.theme.imageShadow}`};
 `;
