@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { ParagraphS } from '../styledComponents/paragraphStyled';
 import {
   ProjectItemContainerS,
@@ -9,13 +10,15 @@ import {
 import { SubTitleS } from '../styledComponents/TitleStyled';
 
 export const ProjectItem = ({
+  id,
   name,
   description,
   thumbnail,
   reverse = false,
 }) => {
+  const navigate = useNavigate();
   return (
-    <ProjectItemContainerS reverse={reverse}>
+    <ProjectItemContainerS reverse={reverse} onClick={() => navigate(id)}>
       <ProjectThumbnailContainerS>
         <ProjectThumbnailS src={`images/thumbnails/${thumbnail}`} alt={name} />
       </ProjectThumbnailContainerS>

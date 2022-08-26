@@ -4,18 +4,17 @@ import { ThemeProvider } from 'styled-components';
 import { Page } from '../components/Page';
 import { GlobalStyles } from '../styledComponents/globarStyles';
 import { useSelector } from 'react-redux';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { Home } from '../components/pages/Home';
 import { Work } from '../components/pages/Work';
 import { Contact } from '../components/pages/Contact';
 import { About } from '../components/pages/About';
 import { NotFound } from '../components/pages/NotFound';
+import { OrderManager } from 'ui/components/pages/projects/OrderManager/OrderManager';
+import { ABOUT, CONTACT, WORK } from 'ui/helpers/constants';
 
 function App() {
   const theme = useSelector((state) => state.theme.value);
-  const location = useLocation();
-
-  console.log('la location is ', location);
 
   return (
     <ThemeProvider theme={theme}>
@@ -23,9 +22,11 @@ function App() {
       <Routes>
         <Route path='/' element={<Page />}>
           <Route index element={<Home />} />
-          <Route path='about' element={<About />} />
-          <Route path='work' element={<Work />} />
-          <Route path='contact' element={<Contact />} />
+          <Route path={ABOUT} element={<About />} />
+          <Route path={WORK} element={<Work />}>
+            <Route path='order_manager' element={<OrderManager />} />
+          </Route>
+          <Route path={CONTACT} element={<Contact />} />
         </Route>
         <Route path='*' element={<NotFound />} />
       </Routes>

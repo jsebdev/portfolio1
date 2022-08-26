@@ -13,6 +13,7 @@ export const ProjectsContainerS = styled.div`
 `;
 
 export const ProjectItemContainerS = styled.div`
+  cursor: pointer;
   width: 100%;
   height: 100%;
   display: flex;

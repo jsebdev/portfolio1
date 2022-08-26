@@ -7,3 +7,8 @@ export const HEADER = 'header';
 export const TWITTER_LINK = 'https://twitter.com/Sebas93cay';
 export const LINKEDIN_LINK = 'https://www.linkedin.com/in/sebscaicedo/';
 export const GITHUB_LINK = 'https://github.com/Sebas93cay';
+
+// routes
+export const ABOUT = 'about';
+export const WORK = 'work';
+export const CONTACT = 'contact';

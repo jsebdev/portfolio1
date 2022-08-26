@@ -10,7 +10,6 @@ import { projectList } from '../../../Data/projects';
 import { ProjectItem } from '../ProjectItem';
 import { ProjectsContainerS } from '../../styledComponents/ProjectsSectionStyled';
 import { MainButtonS } from '../../styledComponents/ButtonsStyled';
-import { ParagraphS } from 'ui/styledComponents/paragraphStyled';
 
 export const ProjectsSection = ({ featured = false }) => {
   const projectsToShow = featured ? projectList.slice(0, 2) : projectList;
