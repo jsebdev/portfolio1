@@ -10,22 +10,22 @@ import { Work } from '../components/pages/Work';
 import { Contact } from '../components/pages/Contact';
 import { About } from '../components/pages/About';
 import { NotFound } from '../components/pages/NotFound';
-import { OrderManager } from 'ui/components/pages/projects/OrderManager/OrderManager';
 import { ABOUT, CONTACT, WORK } from 'ui/helpers/constants';
+import { darkTheme, lightTheme, themesNames } from 'ui/helpers/themes';
 
 function App() {
-  const theme = useSelector((state) => state.theme.value);
+  const themeName = useSelector((state) => state.theme.value);
 
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider
+      theme={themeName === themesNames.light ? lightTheme : darkTheme}
+    >
       <GlobalStyles />
       <Routes>
         <Route path='/' element={<Page />}>
           <Route index element={<Home />} />
           <Route path={ABOUT} element={<About />} />
-          <Route path={WORK} element={<Work />}>
-            <Route path='order_manager' element={<OrderManager />} />
-          </Route>
+          <Route path={WORK} element={<Work />}></Route>
           <Route path={CONTACT} element={<Contact />} />
         </Route>
         <Route path='*' element={<NotFound />} />

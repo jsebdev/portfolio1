@@ -1,5 +1,6 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { WORK } from 'ui/helpers/constants';
 import { ParagraphS } from '../styledComponents/paragraphStyled';
 import {
   ProjectItemContainerS,
@@ -10,21 +11,31 @@ import {
 import { SubTitleS } from '../styledComponents/TitleStyled';
 
 export const ProjectItem = ({
-  id,
   name,
-  description,
+  descriptionText,
+  DescriptionComponent,
+  descriptionComponentProps,
   thumbnail,
   reverse = false,
+  deploymentUrl,
 }) => {
-  const navigate = useNavigate();
   return (
-    <ProjectItemContainerS reverse={reverse} onClick={() => navigate(id)}>
+    <ProjectItemContainerS reverse={reverse}>
       <ProjectThumbnailContainerS>
-        <ProjectThumbnailS src={`images/thumbnails/${thumbnail}`} alt={name} />
+        <a href={deploymentUrl} target='_blank' rel='noreferrer'>
+          <ProjectThumbnailS
+            src={`images/thumbnails/${thumbnail}`}
+            alt={name}
+          />
+        </a>
       </ProjectThumbnailContainerS>
-      <ProjectItemTextS>
+      <ProjectItemTextS href={deploymentUrl} target='_blank' rel='noreferrer'>
         <SubTitleS>{name}</SubTitleS>
-        <ParagraphS>{description}</ParagraphS>
+        {DescriptionComponent ? (
+          <DescriptionComponent {...descriptionComponentProps} />
+        ) : (
+          <ParagraphS>{descriptionText}</ParagraphS>
+        )}
       </ProjectItemTextS>
     </ProjectItemContainerS>
   );

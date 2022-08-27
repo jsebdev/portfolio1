@@ -15,7 +15,13 @@ export const HeaderS = styled.header`
   box-shadow: ${(props) =>
     `${props.theme.shadowBoxPosition} ${props.theme.headerShadow}`};
   position: relative;
+  transition: 0.2s;
   @media (${mediaQueries.desktop}) {
     justify-content: space-between;
+  }
+  &:hover {
+    box-shadow: ${(props) =>
+      `${props.theme.shadowBoxPositionHover} ${props.theme.headerShadow}`};
+    /* box-shadow: ${(props) => `${props.theme.shadowBoxPositionHover} red`}; */
   }
 `;

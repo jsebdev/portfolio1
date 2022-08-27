@@ -16,7 +16,7 @@ export const alphaShadowLayer = {
 };
 
 export const lightTheme = {
-  name: themesNames.light,
+  name: themesNames.light + 'jijijijij',
   body: themeColors.white,
   fontColor: themeColors.darkBlue,
   logo: themeColors.green,
@@ -33,6 +33,7 @@ export const lightTheme = {
   shadowLayer: themeColors.darkBlue + alphaShadowLayer.lightTheme,
   shadowLayerTransparent: themeColors.darkBlue + '00',
   shadowBoxPosition: `1px 2px 5px 2px`,
+  shadowBoxPositionHover: `1px 2px 6px 4px`,
   shadowTextPosition: '2px 2px 0px',
   projectItemBorder: themeColors.gray,
   sectionTitle: themeColors.green,
@@ -49,7 +50,12 @@ export const lightTheme = {
   inputPlaceholder: themeColors.gray,
   socialName: themeColors.green,
   separatorBorder: themeColors.gray,
+  hola: 'adios',
+  secondaryButton0: themeColors.black,
+  secondaryButton1: themeColors.white,
 };
+
+console.log('ey the theme is: ', lightTheme);
 
 export const darkTheme = {
   name: themesNames.dark,
@@ -69,6 +75,7 @@ export const darkTheme = {
   shadowLayer: themeColors.black + alphaShadowLayer.darkTheme,
   shadowLayerTransparent: themeColors.black + '00',
   shadowBoxPosition: `1px 2px 5px 2px`,
+  shadowBoxPositionHover: `1px 2px 6px 4px`,
   shadowTextPosition: '2px 2px 1px',
   shadowAlpha: '44',
   projectItemBorder: themeColors.white,
@@ -86,4 +93,6 @@ export const darkTheme = {
   inputPlaceholder: themeColors.lightBlue,
   socialName: themeColors.green,
   separatorBorder: themeColors.gray,
+  secondaryButton0: themeColors.white,
+  secondaryButton1: themeColors.black,
 };

@@ -13,7 +13,7 @@ export const ProjectsContainerS = styled.div`
 `;
 
 export const ProjectItemContainerS = styled.div`
-  cursor: pointer;
+  color: inherit;
   width: 100%;
   height: 100%;
   display: flex;
@@ -35,6 +35,7 @@ export const ProjectThumbnailContainerS = styled.div`
   border-radius: 10px;
   overflow: hidden;
   margin-block-end: 1rem;
+  transition: 0.3s;
   &::after {
     content: '';
     display: block;
@@ -45,6 +46,10 @@ export const ProjectThumbnailContainerS = styled.div`
   }
   box-shadow: ${(props) =>
     `${props.theme.shadowBoxPosition} ${props.theme.imageShadow}`};
+  &:hover {
+    box-shadow: ${(props) =>
+      `${props.theme.shadowBoxPositionHover} ${props.theme.imageShadow}`};
+  }
 `;
 
 export const ProjectThumbnailS = styled.img`
@@ -55,7 +60,9 @@ export const ProjectThumbnailS = styled.img`
   object-position: center;
 `;
 
-export const ProjectItemTextS = styled.div`
+export const ProjectItemTextS = styled.a`
+  text-decoration: none;
+  color: inherit;
   @media (${mediaQueries.tablet}) {
     width: ${100 - thumbnailWidth}%;
     padding-inline: 2rem;
