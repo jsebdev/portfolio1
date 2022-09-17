@@ -11,23 +11,27 @@ import {
   SocialNameS,
 } from 'ui/styledComponents/ContactContentStyled';
 import { ParagraphS } from 'ui/styledComponents/paragraphStyled';
+import { useSendEmail } from './useSendEmail';
 
 export const Contact = () => {
+
+  const { formRef, sendEmail } = useSendEmail()
+
   return (
     <div>
       <ParagraphS>You can always reach me, I’ll be happy to answer</ParagraphS>
       <ParagraphS>you don’t have to say Hello 😉</ParagraphS>
-      <ContactFormS action=''>
-        <InputFormS type='text' placeholder='Name' />
-        <InputFormS type='text' placeholder='Email' />
+      <ContactFormS onSubmit={sendEmail} ref={formRef}>
+        <InputFormS type='text' placeholder='Name' name='user_name' />
+        <InputFormS type='text' placeholder='Email' name='user_email' />
         <AreaInputFormS
-          name=''
-          id=''
+          name='message'
+          id='message-area'
           cols='30'
           rows='8'
           placeholder='Message'
         ></AreaInputFormS>
-        <FormButtonS width='fit-content'> Send </FormButtonS>
+        <FormButtonS />
       </ContactFormS>
       <SocialDivS>
         <ParagraphS>Or you can reach me directly in my socials</ParagraphS>

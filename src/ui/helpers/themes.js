@@ -16,7 +16,7 @@ export const alphaShadowLayer = {
 };
 
 export const lightTheme = {
-  name: themesNames.light + 'jijijijij',
+  name: themesNames.light,
   body: themeColors.white,
   fontColor: themeColors.darkBlue,
   logo: themeColors.green,
@@ -54,8 +54,6 @@ export const lightTheme = {
   secondaryButton0: themeColors.black,
   secondaryButton1: themeColors.white,
 };
-
-console.log('ey the theme is: ', lightTheme);
 
 export const darkTheme = {
   name: themesNames.dark,

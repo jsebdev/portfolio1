@@ -50,7 +50,7 @@ export const InputFormS = styled.input`
 
 export const AreaInputFormS = styled(InputFormS).attrs({ as: 'textarea' })``;
 
-export const FormButtonS = styled(MainButtonS)`
+export const FormButtonS = styled(MainButtonS).attrs({ as: 'input', value: 'Send', type: 'submit' })`
   width: 'fit-content';
   margin: 1rem;
 `;
