@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { mediaQueries } from 'ui/helpers/measures';
 
 export const SectionS = styled.div``;
 
@@ -8,9 +9,9 @@ export const SectionHeaderS = styled.div`
   justify-content: space-between;
   align-items: center;
   padding-bottom: 0.5rem;
-  /* border-bottom: 1px solid ${(props) =>
-    props.theme.sectionHeaderBorderBottom}; */
-  margin-block-end: 1.5rem;
+  @media (${mediaQueries.tablet}) {
+    margin-block-end: 1.5rem;
+  }
 `;
 
 export const TitledSectionS = styled(SectionS)`

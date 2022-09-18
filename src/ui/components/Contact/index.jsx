@@ -1,57 +1,48 @@
 import React from 'react';
-import { LINKEDIN_LINK, TWITTER_LINK } from 'ui/helpers/constants';
 import {
   AreaInputFormS,
+  ContactFormContainerS,
   ContactFormS,
   FormButtonS,
   InputFormS,
-  SocialDivS,
-  SocialLinkContactS,
-  SocialLinksContactContainerS,
-  SocialNameS,
 } from 'ui/styledComponents/ContactContentStyled';
 import { ParagraphS } from 'ui/styledComponents/paragraphStyled';
 import { useSendEmail } from './useSendEmail';
+import { PlainLinkS } from 'ui/styledComponents/PlainLinkStyled';
+import { SpanDescriptorS } from 'ui/styledComponents/imageDescriptorStyled';
+import {
+  ContactImageContainerS,
+  ContactImageS,
+} from '../../styledComponents/ContactContentStyled';
 
 export const Contact = () => {
 
   const { formRef, sendEmail } = useSendEmail()
 
   return (
-    <div>
-      <ParagraphS>You can always reach me, I’ll be happy to answer</ParagraphS>
-      <ParagraphS>you don’t have to say Hello 😉</ParagraphS>
-      <ContactFormS onSubmit={sendEmail} ref={formRef}>
-        <InputFormS type='text' placeholder='Name' name='user_name' />
-        <InputFormS type='text' placeholder='Email' name='user_email' />
-        <AreaInputFormS
-          name='message'
-          id='message-area'
-          cols='30'
-          rows='8'
-          placeholder='Message'
-        ></AreaInputFormS>
-        <FormButtonS />
-      </ContactFormS>
-      <SocialDivS>
-        <ParagraphS>Or you can reach me directly in my socials</ParagraphS>
-        <SocialLinksContactContainerS>
-          <SocialLinkContactS
-            href={LINKEDIN_LINK}
-            rel='noreferrer'
-            target='_blank'
-          >
-            <SocialNameS>LinkedIn:</SocialNameS> @sebscaicedo
-          </SocialLinkContactS>
-          <SocialLinkContactS
-            href={TWITTER_LINK}
-            rel='noreferrer'
-            target='_blank'
-          >
-            <SocialNameS>Twitter:</SocialNameS> @Sebas93cay
-          </SocialLinkContactS>
-        </SocialLinksContactContainerS>
-      </SocialDivS>
-    </div>
+    <ContactFormContainerS>
+      <ContactImageContainerS>
+        <ContactImageS src='images/pencil.png' alt='' />
+        <SpanDescriptorS size='0.7rem'>
+          image from <PlainLinkS href="https://www.freepik.es/vector-gratis/ilustracion-icono-dibujos-animados-lapiz-papel-concepto-icono-objeto-educacion-aislado-estilo-dibujos-animados-plana_10848245.htm#query=write&position=2&from_view=search" target='_blank'>catalyststuff</PlainLinkS>
+        </SpanDescriptorS>
+      </ContactImageContainerS>
+      <div>
+        <ParagraphS>You can always reach me, I’ll be happy to answer</ParagraphS>
+        <ParagraphS>you don’t have to say Hello 😉</ParagraphS>
+        <ContactFormS onSubmit={sendEmail} ref={formRef}>
+          <InputFormS type='text' placeholder='Name' name='user_name' />
+          <InputFormS type='text' placeholder='Email' name='user_email' />
+          <AreaInputFormS
+            name='message'
+            id='message-area'
+            cols='30'
+            rows='8'
+            placeholder='Message'
+          ></AreaInputFormS>
+          <FormButtonS />
+        </ContactFormS>
+      </div>
+    </ContactFormContainerS>
   );
 };

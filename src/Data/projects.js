@@ -13,19 +13,5 @@ export const projectList = [
       backUrl: 'https://github.com/Sebas93cay/Order_Manager_api',
     },
     deploymentUrl: 'https://Sebas93cay.github.io/Order_Manager_frontend',
-  },
-  {
-    id: 'proyecto',
-    thumbnail: 'proyecto.jpg',
-    name: 'A Project',
-    description:
-      ' 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchange',
-  },
-  {
-    id: 'otro_proyecto',
-    thumbnail: 'otro_proyecto.png',
-    name: 'Another Project',
-    description:
-      ' 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchange',
-  },
+  }
 ];

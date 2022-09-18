@@ -5,24 +5,37 @@ import { MainButtonS } from './ButtonsStyled';
 export const ContactContentS = styled.div`
   display: flex;
   flex-direction: column;
-  @media (${mediaQueries.tablet}) {
-    flex-direction: row;
-  }
 `;
 
-export const ContactImageContainerS = styled.div`
-  padding: 2rem;
+export const ContactFormContainerS = styled.div`
   display: flex;
+  flex-direction: column;
   align-items: center;
+  @media (${mediaQueries.tablet}) {
+    flex-direction: row-reverse;
+  }
+`
+
+export const ContactImageContainerS = styled.div`
+  padding: 0rem;
+  margin-block-end: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
   @media (${mediaQueries.tablet}) {
     width: 50%;
   }
 `;
 
+const [x, y, blur] = ['5px', '6px', '0px']
 export const ContactImageS = styled.img`
   width: 100%;
-  box-shadow: ${(props) =>
-    `${props.theme.shadowBoxPosition} ${props.theme.imageShadow}`};
+  filter: drop-shadow(${x} ${y} ${blur} ${({ theme }) => `${theme.imageShadow}`});
+  max-width: 250px;
+  @media (${mediaQueries.tablet}) {
+    width: 80%;
+  }
 `;
 
 export const ContactFormS = styled.form`
@@ -61,6 +74,9 @@ export const SocialDivS = styled.div`
 
 export const SocialLinksContactContainerS = styled.div`
   margin-block: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `;
 
 export const SocialLinkContactS = styled.a`
@@ -68,7 +84,14 @@ export const SocialLinkContactS = styled.a`
   text-align: center;
   text-decoration: none;
   color: ${(props) => props.theme.fontColor};
-  margin-block: 0.6rem;
+  margin-block: 0.2rem;
+  padding: 0.3rem;
+  border-radius: 0.4rem;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    box-shadow: ${(props) =>
+    `${props.theme.shadowBoxPosition} ${props.theme.imageShadow}`};
+  }
 `;
 
 export const SocialNameS = styled.span`

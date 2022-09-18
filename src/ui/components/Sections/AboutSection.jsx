@@ -54,8 +54,8 @@ export const AboutSection = () => {
             scraping. 📈
           </ParagraphS>
           <ParagraphS>
-            I consider myself a black hole of information (aka I like learning
-            new things a lot), so when I'm not working I'm usually watching
+            I consider myself a black hole of information &lt;I mean, I like learning
+            new things a lot&gt;, so when I'm not working I'm usually watching
             videos or tutorials, learning a new language, or working on a side
             project to expand my skills. Also now and then I do virtual math
             lessons. 🤓
