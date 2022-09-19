@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import { SpinnerBackgroundS, SpinnerInside1S, SpinnerInside2S, SpinnerS } from 'ui/styledComponents/SpinnerStyled';
 
 export const Spinner = () => {

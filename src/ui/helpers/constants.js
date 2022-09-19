@@ -5,8 +5,8 @@ export const HEADER = 'header';
 
 // links
 export const TWITTER_LINK = 'https://twitter.com/jsebdeveloper';
-export const LINKEDIN_LINK = 'https://www.linkedin.com/in/sebscaicedo/';
-export const GITHUB_LINK = 'https://github.com/Sebas93cay';
+export const LINKEDIN_LINK = 'https://www.linkedin.com/in/jsebdev';
+export const GITHUB_LINK = 'https://github.com/jsebdev';
 
 // routes
 export const ABOUT = 'about';

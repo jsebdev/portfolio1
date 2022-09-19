@@ -1,6 +1,4 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { WORK } from 'ui/helpers/constants';
 import { ParagraphS } from '../styledComponents/paragraphStyled';
 import {
   ProjectItemContainerS,

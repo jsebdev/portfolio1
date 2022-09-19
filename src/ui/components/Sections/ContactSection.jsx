@@ -8,12 +8,7 @@ import {
 } from 'ui/styledComponents/ContactContentStyled';
 import { ParagraphS } from 'ui/styledComponents/paragraphStyled';
 import { getUserAt } from 'ui/helpers/helpers';
-import { PlainLinkS } from 'ui/styledComponents/PlainLinkStyled';
-import {
-  ContactContentS,
-  ContactImageContainerS,
-  ContactImageS,
-} from '../../styledComponents/ContactContentStyled';
+import { ContactContentS } from '../../styledComponents/ContactContentStyled';
 import {
   SectionHeaderS,
   TitledSectionS,
