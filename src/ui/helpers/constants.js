@@ -12,3 +12,6 @@ export const GITHUB_LINK = 'https://github.com/Sebas93cay';
 export const ABOUT = 'about';
 export const WORK = 'work';
 export const CONTACT = 'contact';
+
+//email
+export const EMAIL = 'jsebdev@gmail.com';

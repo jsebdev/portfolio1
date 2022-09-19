@@ -5,11 +5,11 @@ import { Page } from '../components/Page';
 import { GlobalStyles } from '../styledComponents/globarStyles';
 import { useSelector } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
-import { Home } from '../components/pages/Home';
-import { Work } from '../components/pages/Work';
-import { Contact } from '../components/pages/Contact';
-import { About } from '../components/pages/About';
-import { NotFound } from '../components/pages/NotFound';
+import { Home } from '../components/pages/HomePage';
+import { Work } from '../components/pages/WorkPage';
+import { Contact } from '../components/pages/ContactPage';
+import { About } from '../components/pages/AboutPage';
+import { NotFound } from '../components/pages/NotFoundPage';
 import { ABOUT, CONTACT, WORK } from 'ui/helpers/constants';
 import { darkTheme, lightTheme, themesNames } from 'ui/helpers/themes';
 

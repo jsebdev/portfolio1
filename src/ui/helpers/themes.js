@@ -53,6 +53,8 @@ export const lightTheme = {
   hola: 'adios',
   secondaryButton0: themeColors.black,
   secondaryButton1: themeColors.white,
+  spinner: themeColors.green,
+  spinnerBackground: `${themeColors.white}99`
 };
 
 export const darkTheme = {
@@ -93,4 +95,6 @@ export const darkTheme = {
   separatorBorder: themeColors.gray,
   secondaryButton0: themeColors.white,
   secondaryButton1: themeColors.black,
+  spinner: themeColors.green,
+  spinnerBackground: `${themeColors.darkBlue}99`
 };

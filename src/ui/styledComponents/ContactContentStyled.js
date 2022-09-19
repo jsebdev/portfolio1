@@ -39,6 +39,7 @@ export const ContactImageS = styled.img`
 `;
 
 export const ContactFormS = styled.form`
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -73,7 +74,7 @@ export const SocialDivS = styled.div`
 `;
 
 export const SocialLinksContactContainerS = styled.div`
-  margin-block: 2rem;
+  margin-block-end: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
