@@ -8,7 +8,7 @@ export const SectionHeaderS = styled.div`
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  padding-bottom: 0.5rem;
+  margin-bottom: ${({ bottomMargin }) => bottomMargin || '0.5rem'};
   @media (${mediaQueries.tablet}) {
     margin-block-end: 1.5rem;
   }

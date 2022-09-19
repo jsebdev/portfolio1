@@ -15,7 +15,7 @@ export const ProjectsSection = ({ featured = false }) => {
   const projectsToShow = featured ? projectList.slice(0, 2) : projectList;
   return (
     <TitledSectionS>
-      <SectionHeaderS>
+      <SectionHeaderS bottomMargin='1.5rem'>
         <SectionTitleS message='sectionTitle'>
           {featured ? 'Featured Projects' : 'Projects'}
         </SectionTitleS>

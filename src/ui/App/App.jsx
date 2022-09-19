@@ -27,8 +27,8 @@ function App() {
           <Route path={ABOUT} element={<About />} />
           <Route path={WORK} element={<Work />}></Route>
           <Route path={CONTACT} element={<Contact />} />
+          <Route path='*' element={<NotFound />} />
         </Route>
-        <Route path='*' element={<NotFound />} />
       </Routes>
     </ThemeProvider>
   );
