@@ -2,6 +2,7 @@
   "name": "portfolio1",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://jsebdev.github.io/portfolio1",
   "dependencies": {
     "@emailjs/browser": "^3.7.0",
     "@reduxjs/toolkit": "^1.8.3",
