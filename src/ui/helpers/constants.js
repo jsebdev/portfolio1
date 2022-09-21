@@ -13,5 +13,11 @@ export const ABOUT = 'about';
 export const WORK = 'work';
 export const CONTACT = 'contact';
 
-//email
+// email
 export const EMAIL = 'jsebdev@gmail.com';
+
+// errors
+export const errors = {
+  invalidEmail: 'Invalid email',
+  unkonwnError: 'Unknown error',
+}

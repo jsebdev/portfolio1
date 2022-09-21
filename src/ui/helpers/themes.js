@@ -54,7 +54,8 @@ export const lightTheme = {
   secondaryButton0: themeColors.black,
   secondaryButton1: themeColors.white,
   spinner: themeColors.green,
-  spinnerBackground: `${themeColors.white}99`
+  spinnerBackground: `${themeColors.white}99`,
+  errorBacground: themeColors.errorBacground,
 };
 
 export const darkTheme = {
@@ -96,5 +97,6 @@ export const darkTheme = {
   secondaryButton0: themeColors.white,
   secondaryButton1: themeColors.black,
   spinner: themeColors.green,
-  spinnerBackground: `${themeColors.darkBlue}99`
+  spinnerBackground: `${themeColors.darkBlue}99`,
+  errorBacground: themeColors.errorBacground,
 };

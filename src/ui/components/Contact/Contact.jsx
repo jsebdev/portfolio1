@@ -15,8 +15,9 @@ import {
   ContactImageS,
 } from '../../styledComponents/ContactContentStyled';
 import { sendStatuses } from './sendStatus';
-import { EMAIL } from 'ui/helpers/constants';
+import { EMAIL, errors } from 'ui/helpers/constants';
 import { Spinner } from 'ui/components/Spinner';
+import { ErrorContainerS } from 'ui/styledComponents/ErrorContainerStyled';
 
 export const Contact = () => {
 
@@ -40,6 +41,9 @@ export const Contact = () => {
         <ContactFormS onSubmit={sendEmail} ref={formRef}>
           <InputFormS type='text' placeholder='Name' name='user_name' />
           <InputFormS type='text' placeholder='Email' name='user_email' />
+          {sendStatus.error === errors.invalidEmail && (
+            <ParagraphS color='red'>Looks like that is not a valid email</ParagraphS>
+          )}
           <AreaInputFormS
             name='message'
             id='message-area'
@@ -51,11 +55,12 @@ export const Contact = () => {
           {sendStatus.status === sendStatuses.success && (
             <ParagraphS color='green'>Message sent successfully</ParagraphS>
           )}
-          {sendStatus.status === sendStatuses.error && (
-            <>
+          {sendStatus.error === errors.unkonwnError && (
+            <ErrorContainerS>
               <ParagraphS centered color='red'>Sorry! there was a problem sending the message.</ParagraphS>
-              <ParagraphS centered color='red'>Please send it directly to: {EMAIL}</ParagraphS>
-            </>
+              <ParagraphS centered>😔</ParagraphS>
+              <ParagraphS centered >Please send it directly to: {EMAIL}</ParagraphS>
+            </ErrorContainerS>
           )}
           {sendStatus.status === sendStatuses.pending && (
             <Spinner></Spinner>
