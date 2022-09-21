@@ -48,7 +48,7 @@ export const ProjectThumbnailContainerS = styled.div`
     `${props.theme.shadowBoxPosition} ${props.theme.imageShadow}`};
   &:hover {
     box-shadow: ${(props) =>
-      `${props.theme.shadowBoxPositionHover} ${props.theme.imageShadow}`};
+    `${props.theme.shadowBoxPositionHover} ${props.theme.imageShadow}`};
   }
 `;
 
@@ -60,9 +60,7 @@ export const ProjectThumbnailS = styled.img`
   object-position: center;
 `;
 
-export const ProjectItemTextS = styled.a`
-  text-decoration: none;
-  color: inherit;
+export const ProjectItemSideS = styled.div`
   @media (${mediaQueries.tablet}) {
     width: ${100 - thumbnailWidth}%;
     padding-inline: 2rem;

@@ -1,8 +1,9 @@
 import React from 'react';
+import { AS } from 'ui/styledComponents/AStyled';
 import { ParagraphS } from '../styledComponents/paragraphStyled';
 import {
   ProjectItemContainerS,
-  ProjectItemTextS,
+  ProjectItemSideS,
   ProjectThumbnailContainerS,
   ProjectThumbnailS,
 } from '../styledComponents/ProjectsSectionStyled';
@@ -27,14 +28,16 @@ export const ProjectItem = ({
           />
         </a>
       </ProjectThumbnailContainerS>
-      <ProjectItemTextS href={deploymentUrl} target='_blank' rel='noreferrer'>
-        <SubTitleS>{name}</SubTitleS>
+      <ProjectItemSideS>
+        <AS href={deploymentUrl}>
+          <SubTitleS>{name}</SubTitleS>
+        </AS>
         {DescriptionComponent ? (
           <DescriptionComponent {...descriptionComponentProps} />
         ) : (
           <ParagraphS>{descriptionText}</ParagraphS>
         )}
-      </ProjectItemTextS>
+      </ProjectItemSideS>
     </ProjectItemContainerS>
   );
 };

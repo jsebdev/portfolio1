@@ -22,10 +22,14 @@ export const Contact = () => {
 
   const { formRef, sendEmail, sendStatus } = useSendEmail()
 
+  const reseteador = () => {
+    formRef.current.reset();
+  }
+
   return (
     <ContactFormContainerS>
       <ContactImageContainerS>
-        <ContactImageS src='images/pencil.png' alt='' />
+        <ContactImageS onClick={reseteador} src='images/pencil.png' alt='' />
         <SpanDescriptorS size='0.7rem'>
           image from <PlainLinkS href="https://www.freepik.es/vector-gratis/ilustracion-icono-dibujos-animados-lapiz-papel-concepto-icono-objeto-educacion-aislado-estilo-dibujos-animados-plana_10848245.htm#query=write&position=2&from_view=search" target='_blank'>catalyststuff</PlainLinkS>
         </SpanDescriptorS>
@@ -49,8 +53,8 @@ export const Contact = () => {
           )}
           {sendStatus.status === sendStatuses.error && (
             <>
-              <ParagraphS color='red'>Sorry! there was a problem sending the message.</ParagraphS>
-              <ParagraphS color='red'>Please send it directly to: {EMAIL}</ParagraphS>
+              <ParagraphS centered color='red'>Sorry! there was a problem sending the message.</ParagraphS>
+              <ParagraphS centered color='red'>Please send it directly to: {EMAIL}</ParagraphS>
             </>
           )}
           {sendStatus.status === sendStatuses.pending && (

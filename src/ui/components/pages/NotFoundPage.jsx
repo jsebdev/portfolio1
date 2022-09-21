@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MainButtonS } from 'ui/styledComponents/ButtonsStyled';
-import { BigMessageS, NotFoundContainerS } from 'ui/styledComponents/NotFoundPage';
+import { BigMessageS, NotFoundContainerS } from 'ui/styledComponents/NotFoundPageStyled';
 import { ParagraphS } from 'ui/styledComponents/paragraphStyled';
 import { SeparatorS } from 'ui/styledComponents/Separator';
 

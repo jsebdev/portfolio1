@@ -10,21 +10,18 @@ export const useSendEmail = () => {
 
   const sendEmail = (event) => {
     event.preventDefault();
-    console.time(timeSendEmail)
     setSendStatus({ status: sendStatuses.pending });
 
     emailjs.sendForm('service_94lfa8d', 'template_w7fklnm', formRef.current, 'fj6CPfC8yMk9P1cUv')
       .then((result) => {
         console.log(result.text);
         setSendStatus({ status: sendStatuses.success });
-        console.timeEnd(timeSendEmail)
+        formRef.current.reset();
       }, (error) => {
         console.log(error.text);
         setSendStatus({ status: sendStatuses.error, message: error.text });
-        console.timeEnd(timeSendEmail)
       });
   }
 
   return { formRef, sendEmail, sendStatus };
-
 }

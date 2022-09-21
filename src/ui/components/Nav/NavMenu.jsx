@@ -11,7 +11,7 @@ export const NavMenu = ({
   type = DESKTOP_MENU,
   active,
   footer = false,
-  closeMenu = () => {},
+  closeMenu,
 }) => {
   const classes = `${type} ${footer ? FOOTER : HEADER}`;
   return (
@@ -25,7 +25,7 @@ export const NavMenu = ({
         <NavItemS>
           <LinkHeaderS
             onClick={closeMenu}
-            href='files/cv.pdf'
+            href='files/SebastianCaicedo_cv.pdf'
             as='a'
             target='_blank'
           >
