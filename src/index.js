@@ -13,7 +13,7 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
-        <Router>
+        <Router basename='/portfolio1'>
           <App />
         </Router>
       </PersistGate>
