@@ -18,6 +18,7 @@ import { sendStatuses } from './sendStatus';
 import { EMAIL, errors } from 'ui/helpers/constants';
 import { Spinner } from 'ui/components/Spinner';
 import { ErrorContainerS } from 'ui/styledComponents/ErrorContainerStyled';
+import { AS } from 'ui/styledComponents/AStyled';
 
 export const Contact = () => {
 
@@ -37,7 +38,7 @@ export const Contact = () => {
       </ContactImageContainerS>
       <div>
         <ParagraphS>You can always reach me, I’ll be happy to answer</ParagraphS>
-        <ParagraphS>you don’t have to say Hello 😉</ParagraphS>
+        <ParagraphS>you <AS href='https://nohello.club/' textDecoration='underline'> don’t have to say Hello</AS>😉</ParagraphS>
         <ContactFormS onSubmit={sendEmail} ref={formRef}>
           <InputFormS type='text' placeholder='Name' name='user_name' />
           <InputFormS type='text' placeholder='Email' name='user_email' />
