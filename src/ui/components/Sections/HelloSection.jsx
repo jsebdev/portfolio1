@@ -9,7 +9,7 @@ import {
 } from '../../../ui/styledComponents/HelloSectionStyled';
 import { ParagraphS } from '../../../ui/styledComponents/paragraphStyled';
 
-import profileImg from 'images/profile2.jpg'
+import profileImg from 'images/profile.jpg'
 
 export const HelloSection = () => {
   return (
@@ -24,8 +24,7 @@ export const HelloSection = () => {
         </ParagraphS>
       </HiMessagesS>
       <ProfileImageContainerS>
-        {/* <ProfileImageS src='images/profile2.jpg' alt='' /> */}
-        <ProfileImageS src={profileImg} alt='' />
+        <ProfileImageS src={profileImg} alt='Juan Sebastian Caicedo Alfonso' />
       </ProfileImageContainerS>
     </HelloSectionS>
   );
