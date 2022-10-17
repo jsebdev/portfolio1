@@ -5,8 +5,8 @@ import App from './ui/App/App';
 import reportWebVitals from './reportWebVitals';
 import { persistor, store } from './store';
 import { PersistGate } from 'redux-persist/integration/react';
-// import { HashRouter as Router } from 'react-router-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { ScrollToTop } from 'ScrollToTop';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,6 +14,7 @@ root.render(
     <Provider store={store}>
       <PersistGate loading={null} persistor={persistor}>
         <Router>
+          <ScrollToTop />
           <App />
         </Router>
       </PersistGate>
