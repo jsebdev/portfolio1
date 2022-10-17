@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { StackItem } from 'ui/components/StackItem'
 import { AS } from 'ui/styledComponents/AStyled'
 import { BlogBlockImageContainerS, BlogBlockImageS, BlogBlockS, BlogBlockTextS, StackContainerS } from 'ui/styledComponents/BlogStyled'
