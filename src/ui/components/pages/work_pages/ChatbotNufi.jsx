@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { StackItem } from 'ui/components/StackItem'
 import { AS } from 'ui/styledComponents/AStyled'
 import { BlogBlockImageContainerS, BlogBlockImageS, BlogBlockS, BlogBlockTextS, StackContainerS } from 'ui/styledComponents/BlogStyled'
@@ -46,51 +46,48 @@ export const ChatbotNufi = () => {
           <BlogBlockTextS>
             <BigStoryChatbotS>The user only needs to provide an ID picture and the bot will do the work.</BigStoryChatbotS>
           </BlogBlockTextS>
-          <BlogBlockImageContainerS>
-            <BlogBlockImageS src={require(`images/chatbotNufi/hola.jpg`)} alt="" />
-          </BlogBlockImageContainerS>
+          <BlogImage image='hola.jpg' />
         </BlogBlockS>
         <BlogBlockS reverted={true}>
           <BlogBlockTextS>
             <BigStoryChatbotS>Or he/she/they can input the person’s information manually.</BigStoryChatbotS>
           </BlogBlockTextS>
-          <BlogBlockImageContainerS>
-            <BlogBlockImageS src={require(`images/chatbotNufi/manually.jpg`)} alt="" />
-          </BlogBlockImageContainerS>
+          <BlogImage image='manually.jpg' />
         </BlogBlockS>
         <BlogBlockS>
           <BlogBlockTextS>
             <BigStoryChatbotS>The user can select what kind of information to research about the person</BigStoryChatbotS>
           </BlogBlockTextS>
-          <BlogBlockImageContainerS>
-            <BlogBlockImageS src={require(`images/chatbotNufi/sections.jpg`)} alt="" />
-          </BlogBlockImageContainerS>
+          <BlogImage image='sections.jpg' />
         </BlogBlockS>
         <BlogBlockS reverted={true}>
           <BlogBlockTextS>
             <BigStoryChatbotS>A web scraping bot does the research on Nufi’s Web Platform.</BigStoryChatbotS>
           </BlogBlockTextS>
-          <BlogBlockImageContainerS>
-            <BlogBlockImageS src={require(`images/chatbotNufi/nufi_page.jpg`)} alt="" />
-          </BlogBlockImageContainerS>
+          <BlogImage image='nufi_page.jpg' />
         </BlogBlockS>
         <BlogBlockS>
           <BlogBlockTextS>
             <BigStoryChatbotS>The user pays using a credit card, and could save the payment information for future background checks</BigStoryChatbotS>
           </BlogBlockTextS>
-          <BlogBlockImageContainerS>
-            <BlogBlockImageS src={require(`images/chatbotNufi/pago.jpg`)} alt="" />
-          </BlogBlockImageContainerS>
+          <BlogImage image='pago.jpg' />
         </BlogBlockS>
         <BlogBlockS reverted={true}>
           <BlogBlockTextS>
             <BigStoryChatbotS>In less than 8 minutes, the chatbot sends in PDFs the information requested.</BigStoryChatbotS>
           </BlogBlockTextS>
-          <BlogBlockImageContainerS>
-            <BlogBlockImageS src={require(`images/chatbotNufi/results.jpg`)} alt="" />
-          </BlogBlockImageContainerS>
+          <BlogImage image='results.jpg' />
         </BlogBlockS>
       </TitledSectionS>
     </>
+  )
+}
+
+const BlogImage = ({ image }) => {
+  const [maximized, setMaximized] = useState(false)
+  return (
+    <BlogBlockImageContainerS className={maximized ? 'maximized' : ''} onClick={() => { setMaximized(m => (!m)) }}>
+      <BlogBlockImageS maximized={maximized} src={require(`images/chatbotNufi/${image}`)} alt="" />
+    </BlogBlockImageContainerS >
   )
 }

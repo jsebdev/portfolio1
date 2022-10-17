@@ -23,6 +23,15 @@ export const BlogBlockImageContainerS = styled.div`
   display: flex;
   justify-content: center;
   padding: 1rem;
+  &.maximized {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    background-color: ${({ theme }) => theme.shadowLayer};
+  }
 `;
 
 export const BlogBlockImageS = styled.img`
@@ -30,9 +39,12 @@ export const BlogBlockImageS = styled.img`
   aspect-ratio: 90/175;
   border-radius: 0.6rem;
   object-position: 0% 47%;
-  max-width: 14rem;
-  box-shadow: ${(props) =>
-    `${props.theme.shadowBoxPosition} ${props.theme.imageShadow}`};
+  ${({ maximized, theme }) => maximized ? `
+    max-width: 100%;
+  ` : `
+    max-width: 14rem;
+    box-shadow: ${theme.shadowBoxPosition} ${theme.imageShadow};
+  `}
 `;
 
 export const StackContainerS = styled.div`
