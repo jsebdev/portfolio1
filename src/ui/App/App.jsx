@@ -10,8 +10,9 @@ import { Work } from '../components/pages/WorkPage';
 import { Contact } from '../components/pages/ContactPage';
 import { About } from '../components/pages/AboutPage';
 import { NotFound } from '../components/pages/NotFoundPage';
-import { ABOUT, CONTACT, WORK } from 'ui/helpers/constants';
+import { ABOUT, CHATBOT_NUFI, CONTACT, WORK } from 'ui/helpers/constants';
 import { darkTheme, lightTheme, themesNames } from 'ui/helpers/themes';
+import { ChatbotNufi } from 'ui/components/pages/work_pages/ChatbotNufi';
 
 function App() {
   const themeName = useSelector((state) => state.theme.value);
@@ -25,7 +26,9 @@ function App() {
         <Route path='/' element={<Page />}>
           <Route index element={<Home />} />
           <Route path={ABOUT} element={<About />} />
-          <Route path={WORK} element={<Work />}></Route>
+          <Route path={WORK} element={<Work />}>
+            <Route path={CHATBOT_NUFI} element={<ChatbotNufi />} />
+          </Route>
           <Route path={CONTACT} element={<Contact />} />
           <Route path='*' element={<NotFound />} />
         </Route>

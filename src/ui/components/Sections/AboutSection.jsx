@@ -12,7 +12,7 @@ import {
 } from '../../styledComponents/aboutStyled';
 import { ParagraphS } from '../../styledComponents/paragraphStyled';
 import { SpanDescriptorS } from '../../styledComponents/imageDescriptorStyled';
-import { aboutImages } from '../../../Data/images';
+import { aboutImages } from '../../../Data/aboutImages';
 
 export const AboutSection = () => {
   const image = useMemo(
@@ -27,7 +27,7 @@ export const AboutSection = () => {
   return (
     <TitledSectionS>
       <SectionHeaderS>
-        <SectionTitleS message='sectionTitle'>About</SectionTitleS>{' '}
+        <SectionTitleS themeColor='sectionTitle'>About</SectionTitleS>{' '}
       </SectionHeaderS>
       <AboutContentS {...image}>
         <AboutText changeToRow={image.changeToRow}>
@@ -70,7 +70,7 @@ export const AboutSection = () => {
           </ParagraphS>
         </AboutText>
         <AboutImageContainerS changeToRow={image.changeToRow}>
-          <AboutImageS {...image} src={`images/about/${image.image}`} alt='' />
+          <AboutImageS {...image} src={require(`images/about/${image.image}`)} alt='' />
           <SpanDescriptorS>{image.description}</SpanDescriptorS>
         </AboutImageContainerS>
       </AboutContentS>

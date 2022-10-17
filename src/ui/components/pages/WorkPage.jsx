@@ -1,6 +1,12 @@
 import React from 'react';
+import { Outlet, useOutlet } from 'react-router-dom';
 import { ProjectsSection } from '../Sections/ProjectsSection';
 
 export const Work = () => {
-  return <ProjectsSection />;
+  const outlet = useOutlet()
+  return (
+    <>
+      {outlet ? <Outlet /> : <ProjectsSection />}
+    </>
+  );
 };

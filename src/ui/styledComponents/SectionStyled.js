@@ -17,4 +17,5 @@ export const SectionHeaderS = styled.div`
 export const TitledSectionS = styled(SectionS)`
   display: flex;
   flex-direction: column;
+  margin-bottom: 3rem;
 `;

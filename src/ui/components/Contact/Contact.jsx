@@ -31,7 +31,7 @@ export const Contact = () => {
   return (
     <ContactFormContainerS>
       <ContactImageContainerS>
-        <ContactImageS onClick={reseteador} src='images/pencil.png' alt='' />
+        <ContactImageS onClick={reseteador} src={require('images/pencil.png')} alt='' />
         <SpanDescriptorS size='0.7rem'>
           image from <PlainLinkS href="https://www.freepik.es/vector-gratis/ilustracion-icono-dibujos-animados-lapiz-papel-concepto-icono-objeto-educacion-aislado-estilo-dibujos-animados-plana_10848245.htm#query=write&position=2&from_view=search" target='_blank'>catalyststuff</PlainLinkS>
         </SpanDescriptorS>

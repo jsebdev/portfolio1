@@ -1,11 +1,11 @@
 import React from 'react';
 import { DESKTOP_MENU, FOOTER, HEADER } from 'ui/helpers/constants';
 import {
-  LinkHeaderS,
   NavItemS,
   NavMenuContainerS,
   NavMenuS,
 } from '../../styledComponents/NavMenuStyled';
+import { LinkS } from 'ui/styledComponents/LinkStyled';
 
 export const NavMenu = ({
   type = DESKTOP_MENU,
@@ -18,30 +18,30 @@ export const NavMenu = ({
     <NavMenuContainerS className={classes} active={active}>
       <NavMenuS>
         <NavItemS>
-          <LinkHeaderS onClick={closeMenu} to='about'>
+          <LinkS onClick={closeMenu} to='about'>
             About
-          </LinkHeaderS>
+          </LinkS>
         </NavItemS>
         <NavItemS>
-          <LinkHeaderS
+          <LinkS
             onClick={closeMenu}
             href='files/SebastianCaicedo_cv.pdf'
             as='a'
             target='_blank'
           >
             Resume
-          </LinkHeaderS>
+          </LinkS>
         </NavItemS>
         <NavItemS>
-          <LinkHeaderS onClick={closeMenu} to='work'>
+          <LinkS onClick={closeMenu} to='work'>
             Projects
-          </LinkHeaderS>
+          </LinkS>
         </NavItemS>
         {/* <NavItemS>Lessons</NavItemS> */}
         <NavItemS>
-          <LinkHeaderS onClick={closeMenu} to='contact'>
+          <LinkS onClick={closeMenu} to='contact'>
             Contact
-          </LinkHeaderS>
+          </LinkS>
         </NavItemS>
       </NavMenuS>
     </NavMenuContainerS>

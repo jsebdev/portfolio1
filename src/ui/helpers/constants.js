@@ -12,6 +12,7 @@ export const GITHUB_LINK = 'https://github.com/jsebdev';
 export const ABOUT = 'about';
 export const WORK = 'work';
 export const CONTACT = 'contact';
+export const CHATBOT_NUFI = 'chatbotNufi';
 
 // email
 export const EMAIL = 'jsebdev@gmail.com';
@@ -20,4 +21,9 @@ export const EMAIL = 'jsebdev@gmail.com';
 export const errors = {
   invalidEmail: 'Invalid email',
   unkonwnError: 'Unknown error',
+}
+
+export const projectPostTypes = {
+  post: 'post',
+  deployment: 'deployment',
 }

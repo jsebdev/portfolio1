@@ -30,9 +30,7 @@ export const SecondaryButtonS = styled(ButtonS)`
   border: 2px solid ${(props) => props.theme.secondaryButton0};
   font-weight: bold;
   color: transparent;
-  background: ${({
-    theme,
-  }) => `linear-gradient(45deg, ${theme.secondaryButton1} 50%, ${theme.secondaryButton0} 0) var(--p, 100%) / 250%
+  background: ${({ theme }) => `linear-gradient(45deg, ${theme.secondaryButton1} 50%, ${theme.secondaryButton0} 0) var(--p, 100%) / 250%
       no-repeat,
     linear-gradient(45deg, ${theme.secondaryButton0} 50%, ${theme.secondaryButton1} 0) var(--p, 100%) / 250% no-repeat`};
   -webkit-background-clip: text, padding-box;

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 import {
   dropDownMenuTransition,
   headerHovers,
@@ -7,7 +6,6 @@ import {
 import { DROP_DOWN_MENU, FOOTER, HEADER } from '../helpers/constants';
 import { FaTimes } from 'react-icons/fa';
 import { mediaQueries } from 'ui/helpers/measures';
-// import { shadowsMeasures } from 'ui/helpers/themes';
 
 export const NavMenuContainerS = styled.div`
   &.${DROP_DOWN_MENU}  {
@@ -28,7 +26,7 @@ export const NavMenuContainerS = styled.div`
       border-radius: 10px;
       border: 2px solid ${(props) => props.theme.dropDownMenuBorder};
       box-shadow: ${(props) =>
-        `${props.theme.shadowBoxPosition} ${props.theme.dropDownMenuShadow};`}
+    `${props.theme.shadowBoxPosition} ${props.theme.dropDownMenuShadow};`}
       overflow: hidden;
       height: auto;
       ${(props) => (!props.active ? `top: -800%` : '')}
@@ -68,11 +66,6 @@ export const NavItemS = styled.li`
     margin-block: 10px;
     width: 100%;
   }
-`;
-
-export const LinkHeaderS = styled(Link)`
-  text-decoration: none;
-  color: ${(props) => props.theme.fontColor};
 `;
 
 export const CloseNavS = styled(FaTimes)`

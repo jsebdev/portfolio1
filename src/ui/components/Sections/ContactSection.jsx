@@ -20,7 +20,7 @@ export const ContactSection = () => {
   return (
     <TitledSectionS>
       <SectionHeaderS>
-        <SectionTitleS message='sectionTitle'>Contact</SectionTitleS>
+        <SectionTitleS themeColor='sectionTitle'>Contact</SectionTitleS>
       </SectionHeaderS>
       <ContactContentS>
         <Contact />

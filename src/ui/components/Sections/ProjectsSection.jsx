@@ -16,7 +16,7 @@ export const ProjectsSection = ({ featured = false }) => {
   return (
     <TitledSectionS>
       <SectionHeaderS bottomMargin='1.5rem'>
-        <SectionTitleS message='sectionTitle'>
+        <SectionTitleS themeColor='sectionTitle'>
           {featured ? 'Featured Projects' : 'Projects'}
         </SectionTitleS>
         {featured && (

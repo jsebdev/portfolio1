@@ -9,8 +9,8 @@ export const headerHovers = (props) => `
 `;
 
 export const titleColor = (props) =>
-  props.message && props.theme[props.message]
-    ? props.theme[props.message]
+  props.themeColor && props.theme[props.themeColor]
+    ? props.theme[props.themeColor]
     : 'inherit';
 
 export const titleShadowColor = (props) =>
@@ -23,10 +23,9 @@ export const titleShadowColor = (props) =>
  */
 export const shadowText = (props) => (textColor) =>
   `
-  text-shadow: ${
-    props.shadowColor || props.shadowColor === undefined
-      ? `${props.theme.shadowTextPosition} ${textColor}`
-      : 'inherit'
+  text-shadow: ${props.shadowColor || props.shadowColor === undefined
+    ? `${props.theme.shadowTextPosition} ${textColor}`
+    : 'inherit'
   };
 `;
 
