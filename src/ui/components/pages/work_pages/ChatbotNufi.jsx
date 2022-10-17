@@ -1,14 +1,16 @@
 import React, { useState } from 'react'
 import { StackItem } from 'ui/components/StackItem'
 import { AS } from 'ui/styledComponents/AStyled'
-import { BlogBlockImageContainerS, BlogBlockImageS, BlogBlockS, BlogBlockTextS, StackContainerS } from 'ui/styledComponents/BlogStyled'
+import { BlogBlockImageContainerS, BlogBlockImageS, BlogBlockS, BlogBlockTextS, BlogFrontImage, StackContainerS } from 'ui/styledComponents/BlogStyled'
 import { BigStoryChatbotS, ParagraphS } from 'ui/styledComponents/paragraphStyled'
 import { SectionHeaderS, TitledSectionS } from 'ui/styledComponents/SectionStyled'
 import { MainTitleS, SectionTitleS } from 'ui/styledComponents/TitleStyled'
+import frontImage from 'images/chatbotNufi/front_image_chatbot.jpg'
 
 export const ChatbotNufi = () => {
   return (
     <>
+      <BlogFrontImage image={frontImage} />
       <MainTitleS themeColor='sectionTitle'>Background Check Whatsapp Chatbot @ Nufi</MainTitleS>
       <BlogBlockS>
         <ParagraphS>Whatsapp chatbot that allows verifying the identity of individuals in under 8 minutes.</ParagraphS>

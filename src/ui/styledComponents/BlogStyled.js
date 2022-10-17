@@ -1,6 +1,19 @@
 import styled from "styled-components";
 import { mediaQueries } from "ui/helpers/measures";
 
+export const BlogFrontImage = styled.div`
+  background: url(${props => props.image}) 50% 45% no-repeat;
+  background-size: cover;
+  margin-block-end: 2rem;
+  height: 6rem;
+  @media (${mediaQueries.tablet}) {
+    height: 10rem;
+  }
+  @media (${mediaQueries.desktop}) {
+    height: 20rem;
+  }
+`;
+
 export const BlogBlockS = styled.div`
   display: flex;
   flex-direction: column;

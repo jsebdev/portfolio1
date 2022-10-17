@@ -14,19 +14,14 @@ export const titleColor = (props) =>
     : 'inherit';
 
 export const titleShadowColor = (props) =>
-  props.message && props.theme[props.message]
-    ? props.theme[props.message + 'Shadow']
+  props.themeColor && props.theme[props.themeColor]
+    ? props.theme[props.themeColor + 'Shadow']
     : 'inherit';
 
 /**
  * shadowText sets a shadow of the same color as the text
  */
 export const shadowText = (props) => (textColor) =>
-  `
-  text-shadow: ${props.shadowColor || props.shadowColor === undefined
-    ? `${props.theme.shadowTextPosition} ${textColor}`
-    : 'inherit'
-  };
-`;
+  `text-shadow: ${props.theme.shadowTextPosition} ${textColor};`;
 
 export const dropDownMenuTransition = 'transition: all 0.3s ease-in-out;';

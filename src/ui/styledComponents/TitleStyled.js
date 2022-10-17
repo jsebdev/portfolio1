@@ -10,7 +10,6 @@ export const MainTitleS = styled.h1`
   color: ${titleColor};
   ${(props) => shadowText(props)(titleShadowColor(props))}
   text-align: center;
-  margin-block-end: 3rem;
 `;
 
 export const TitleS = styled.h2`
