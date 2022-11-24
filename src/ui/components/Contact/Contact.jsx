@@ -22,16 +22,12 @@ import { AS } from 'ui/styledComponents/AStyled';
 
 export const Contact = () => {
 
-  const { formRef, sendEmail, sendStatus } = useSendEmail()
-
-  const reseteador = () => {
-    formRef.current.reset();
-  }
+  const { formRef, sendEmail, sendStatus, userEmail } = useSendEmail()
 
   return (
     <ContactFormContainerS>
       <ContactImageContainerS>
-        <ContactImageS onClick={reseteador} src={require('images/pencil.png')} alt='' />
+        <ContactImageS src={require('images/pencil.png')} alt='' />
         <SpanDescriptorS size='0.7rem'>
           image from <PlainLinkS href="https://www.freepik.es/vector-gratis/ilustracion-icono-dibujos-animados-lapiz-papel-concepto-icono-objeto-educacion-aislado-estilo-dibujos-animados-plana_10848245.htm#query=write&position=2&from_view=search" target='_blank'>catalyststuff</PlainLinkS>
         </SpanDescriptorS>
@@ -54,7 +50,10 @@ export const Contact = () => {
           ></AreaInputFormS>
           <FormButtonS />
           {sendStatus.status === sendStatuses.success && (
-            <ParagraphS color='green'>Message sent successfully</ParagraphS>
+            <>
+              <ParagraphS color='green' centered>Message sent successfully!</ParagraphS>
+              <ParagraphS color='green' centered>You should have received a copy to {userEmail}</ParagraphS>
+            </>
           )}
           {sendStatus.error === errors.unkonwnError && (
             <ErrorContainerS>

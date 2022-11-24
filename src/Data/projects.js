@@ -10,7 +10,7 @@ export const projectList = [
     DescriptionComponent: OrderManagerDescription,
     descriptionComponentProps: {
       descriptionText:
-        'Web app for for handling orders creation, deletion, shipping and searches for retail companies',
+        'Web app for handling orders creation, deletion, shipping and searches for retail companies',
       frontUrl: 'https://github.com/jsebdev/Order_Manager_frontend',
       backUrl: 'https://github.com/jsebdev/Order_Manager_api',
     },

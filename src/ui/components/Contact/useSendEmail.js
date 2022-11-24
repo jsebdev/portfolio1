@@ -5,6 +5,7 @@ import { errors } from 'ui/helpers/constants';
 
 export const useSendEmail = () => {
   const [sendStatus, setSendStatus] = useState({ status: sendStatuses.idle });
+  const [userEmail, setUserEmail] = useState('');
   const formRef = useRef(null);
 
   const sendEmail = (event) => {
@@ -22,6 +23,7 @@ export const useSendEmail = () => {
       .then((result) => {
         console.log(result.text);
         setSendStatus({ status: sendStatuses.success });
+        setUserEmail(email);
         formRef.current.reset();
       }, (error) => {
         console.log(error.text);
@@ -29,5 +31,5 @@ export const useSendEmail = () => {
       });
   }
 
-  return { formRef, sendEmail, sendStatus };
+  return { formRef, sendEmail, sendStatus, userEmail };
 }
