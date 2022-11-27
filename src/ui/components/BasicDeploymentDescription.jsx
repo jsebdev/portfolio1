@@ -6,7 +6,7 @@ import {
 import { CenteredSpanS } from 'ui/styledComponents/helpComponentsStyled';
 import { ParagraphS } from 'ui/styledComponents/paragraphStyled';
 
-export const OrderManagerDescription = ({
+export const BasicDeploymentDescription = ({
   descriptionText,
   frontUrl,
   backUrl,
