@@ -12,7 +12,7 @@ import { ProjectsContainerS } from '../../styledComponents/ProjectsSectionStyled
 import { MainButtonS } from '../../styledComponents/ButtonsStyled';
 
 export const ProjectsSection = ({ featured = false }) => {
-  const projectsToShow = featured ? projectList.slice(0, 2) : projectList;
+  const projectsToShow = featured ? projectList.filter(project => project.featured) : projectList;
   return (
     <TitledSectionS>
       <SectionHeaderS bottomMargin='1.5rem'>

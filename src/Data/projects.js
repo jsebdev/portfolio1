@@ -15,6 +15,17 @@ export const projectList = [
       backUrl: 'https://github.com/jsebdev/E-commerce-graphql-django',
     },
     deploymentUrl: 'https://port-ecommerce.shop/',
+    featured: true
+  },
+  {
+    id: 'nufi_chatbot',
+    thumbnail: 'chatbot.jpg',
+    name: 'Background check chatbot',
+    projectPostType: projectPostTypes.post,
+    postLocation: `/${WORK}/${CHATBOT_NUFI}`,
+    descriptionText:
+      'Whatsapp chatbot that allows verifying the identity of individuals in under 8 minutes.',
+    featured: true
   },
   {
     id: 'order_manager',
@@ -29,14 +40,6 @@ export const projectList = [
       backUrl: 'https://github.com/jsebdev/Order_Manager_api',
     },
     deploymentUrl: 'https://jsebdev.github.io/Order_Manager_frontend',
+    featured: false
   },
-  {
-    id: 'nufi_chatbot',
-    thumbnail: 'chatbot.jpg',
-    name: 'Background check chatbot',
-    projectPostType: projectPostTypes.post,
-    postLocation: `/${WORK}/${CHATBOT_NUFI}`,
-    descriptionText:
-      'Whatsapp chatbot that allows verifying the identity of individuals in under 8 minutes.',
-  }
 ];
