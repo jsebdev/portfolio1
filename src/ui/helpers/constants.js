@@ -13,6 +13,8 @@ export const ABOUT = 'about';
 export const WORK = 'work';
 export const CONTACT = 'contact';
 export const CHATBOT_NUFI = 'chatbotNufi';
+export const RESUME = '/resume';
+export const RESUME_FILE = '/files/SebastianCaicedo_cv.pdf'
 
 // email
 export const EMAIL = 'jsebdev@gmail.com';

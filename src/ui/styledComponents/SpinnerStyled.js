@@ -36,7 +36,7 @@ const spinnerTwo = keyframes`
 }`;
 
 export const SpinnerBackgroundS = styled.div`
-  position: absolute;
+  position: ${({ position }) => (position || 'absolute')};
   width: 105%;
   height: 105%;
   top: 0px;
@@ -64,7 +64,7 @@ export const SpinnerInside1S = styled.div`
   animation: ${spinnerOne} 0.8s linear infinite;
 `;
 export const SpinnerInside2S = styled(SpinnerInside1S)`
-  border: $maxWidth solid transparent;
+  border: ${maxWidth} solid transparent;
   border-bottom-color: ${({ theme }) => theme.spinner};
   animation: ${spinnerTwo} 1.3s linear infinite;
 `;

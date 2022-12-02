@@ -1,9 +1,9 @@
 import React from 'react';
 import { SpinnerBackgroundS, SpinnerInside1S, SpinnerInside2S, SpinnerS } from 'ui/styledComponents/SpinnerStyled';
 
-export const Spinner = () => {
+export const Spinner = ({ position = null }) => {
   return (
-    <SpinnerBackgroundS>
+    <SpinnerBackgroundS position={position}>
       <SpinnerS>
         <SpinnerInside1S />
         <SpinnerInside2S />

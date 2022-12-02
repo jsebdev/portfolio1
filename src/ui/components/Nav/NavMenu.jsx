@@ -1,5 +1,5 @@
 import React from 'react';
-import { DESKTOP_MENU, FOOTER, HEADER } from 'ui/helpers/constants';
+import { DESKTOP_MENU, FOOTER, HEADER, RESUME_FILE } from 'ui/helpers/constants';
 import {
   NavItemS,
   NavMenuContainerS,
@@ -25,7 +25,7 @@ export const NavMenu = ({
         <NavItemS>
           <LinkS
             onClick={closeMenu}
-            href='files/SebastianCaicedo_cv.pdf'
+            href={RESUME_FILE}
             as='a'
             target='_blank'
           >
