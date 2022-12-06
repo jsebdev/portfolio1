@@ -18,6 +18,9 @@ export const AboutContentS = styled.div`
 
 export const AboutText = styled.div`
   margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   ${(props) =>
     props.changeToRow
       ? `
@@ -40,7 +43,6 @@ export const AboutImageContainerS = styled.div`
         @media (${mediaQueries.tablet}) {
           width: ${100 - textWidthPercent}%;
           padding-inline: 1.5rem;
-          padding-block: 4rem;
         }
   `
       : ''}
@@ -58,8 +60,8 @@ export const AboutImageS = styled.img`
   @media (${mediaQueries.tablet}) {
     width: 100%;
     ${(props) =>
-      props.aspectRatioTablet
-        ? `aspect-ratio: ${props.aspectRatioTablet};`
-        : ''}
+    props.aspectRatioTablet
+      ? `aspect-ratio: ${props.aspectRatioTablet};`
+      : ''}
   }
 `;
