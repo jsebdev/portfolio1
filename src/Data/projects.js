@@ -1,4 +1,4 @@
-import { BasicDeploymentDescription } from 'ui/components/BasicDeploymentDescription';
+import { DeploymentCustomLinks } from 'ui/components/projectsDescriptions/DeploymentCustomLinks';
 import { CHATBOT_NUFI, projectPostTypes, WORK } from 'ui/helpers/constants';
 
 export const projectList = [
@@ -7,14 +7,33 @@ export const projectList = [
     thumbnail: 'ecommerce.png',
     name: 'Port-ecommerce',
     projectPostType: projectPostTypes.deployment,
-    DescriptionComponent: BasicDeploymentDescription,
+    DescriptionComponent: DeploymentCustomLinks,
     descriptionComponentProps: {
       descriptionText:
         'E-commerce website for massive online store. It is a full stack project, built with Nextjs, Redux, Django, Graphql, Postgres.',
-      frontUrl: 'https://github.com/jsebdev/E-commerce-graphql-nextjs',
-      backUrl: 'https://github.com/jsebdev/E-commerce-graphql-django',
+      customLinks: {
+        "Front code": 'https://github.com/jsebdev/E-commerce-graphql-nextjs',
+        "Back code": 'https://github.com/jsebdev/E-commerce-graphql-django',
+      }
     },
     deploymentUrl: 'https://port-ecommerce.shop/',
+    featured: true
+  },
+  {
+    id: 'booking-experience',
+    thumbnail: 'booking_experience.png',
+    name: 'Booking experience',
+    projectPostType: projectPostTypes.deployment,
+    DescriptionComponent: DeploymentCustomLinks,
+    descriptionComponentProps: {
+      descriptionText:
+        'Simulating booking experience with Next.js and Redux. Avoid bookings overlapping and theme responds to machine preference changes.',
+      customLinks: {
+        Code: "https://github.com/jsebdev/booking_experience",
+        Video: "https://youtu.be/LWFh4IbhSmI"
+      }
+    },
+    deploymentUrl: 'https://booking-experience.netlify.app/',
     featured: true
   },
   {
@@ -32,12 +51,14 @@ export const projectList = [
     thumbnail: 'order_manager.PNG',
     name: 'Order Manager',
     projectPostType: projectPostTypes.deployment,
-    DescriptionComponent: BasicDeploymentDescription,
+    DescriptionComponent: DeploymentCustomLinks,
     descriptionComponentProps: {
       descriptionText:
         'Web app for handling orders creation, deletion, shipping and searches for retail companies',
-      frontUrl: 'https://github.com/jsebdev/Order_Manager_frontend',
-      backUrl: 'https://github.com/jsebdev/Order_Manager_api',
+      customLinks: {
+        "Front code": 'https://github.com/jsebdev/Order_Manager_frontend',
+        "Back code": 'https://github.com/jsebdev/Order_Manager_api',
+      }
     },
     deploymentUrl: 'https://jsebdev.github.io/Order_Manager_frontend',
     featured: false
