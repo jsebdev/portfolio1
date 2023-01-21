@@ -1,11 +1,14 @@
 import React from 'react'
-import { SecondaryButtonS } from 'ui/styledComponents/ButtonsStyled'
-import { StackItemContainerS } from 'ui/styledComponents/StackItemStyled'
+import { SmallDetailS } from 'ui/styledComponents/paragraphStyled'
+import { LogoContainerS, LogoS, StackItemContainerS } from 'ui/styledComponents/StackItemStyled'
 
-export const StackItem = ({ name, href }) => {
+export const StackItem = ({ name, href, icon, alt }) => {
   return (
     <StackItemContainerS href={href} target='_blank' rel='noreferrer'>
-      <SecondaryButtonS>{name}</SecondaryButtonS>
+      <LogoContainerS>
+        <LogoS src={icon} alt={alt} />
+      </LogoContainerS>
+      <SmallDetailS>{name}</SmallDetailS>
     </StackItemContainerS>
   )
 }

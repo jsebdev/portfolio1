@@ -6,6 +6,10 @@ export const ParagraphS = styled.p`
   ${({ color }) => color ? `color: ${color};` : ''}
 `;
 
+export const SmallDetailS = styled.p`
+  font-size: 0.8rem;
+`
+
 export const BigStoryChatbotS = styled(ParagraphS)`
   font-size: 1.5rem;
   text-align: center;

@@ -2,7 +2,6 @@ import React from 'react';
 import { projectPostTypes } from 'ui/helpers/constants';
 import { AS } from 'ui/styledComponents/AStyled';
 import { ParagraphS } from '../styledComponents/paragraphStyled';
-import { Link } from 'react-router-dom';
 import {
   ProjectItemContainerS,
   ProjectItemSideS,
@@ -23,45 +22,21 @@ export const ProjectItem = ({
   projectPostType,
   postLocation
 }) => {
+  const MyLink = getLinkType(projectPostType, { postLocation, deploymentUrl });
   return (
     <ProjectItemContainerS reverse={reverse}>
       <ProjectThumbnailContainerS>
-        {
-          projectPostType === projectPostTypes.post && (
-            <Link to={postLocation}>
-              <ProjectThumbnailS
-                src={require(`images/thumbnails/${thumbnail}`)}
-                alt={name}
-              />
-            </Link>
-          )
-        }
-        {
-          projectPostType === projectPostTypes.deployment && (
-            <AS href={deploymentUrl}>
-              <ProjectThumbnailS
-                src={require(`images/thumbnails/${thumbnail}`)}
-                alt={name}
-              />
-            </AS>
-          )
-        }
+        <MyLink>
+          <ProjectThumbnailS
+            src={require(`images/thumbnails/${thumbnail}`)}
+            alt={name}
+          />
+        </MyLink>
       </ProjectThumbnailContainerS>
       <ProjectItemSideS>
-        {
-          projectPostType === projectPostTypes.deployment && (
-            <AS href={deploymentUrl}>
-              <SubTitleS>{name}</SubTitleS>
-            </AS>
-          )
-        }
-        {
-          projectPostType === projectPostTypes.post && (
-            <LinkS to={postLocation}>
-              <SubTitleS>{name}</SubTitleS>
-            </LinkS>
-          )
-        }
+        <MyLink>
+          <SubTitleS>{name}</SubTitleS>
+        </MyLink>
         {DescriptionComponent ? (
           <DescriptionComponent {...descriptionComponentProps} />
         ) : (
@@ -71,3 +46,23 @@ export const ProjectItem = ({
     </ProjectItemContainerS >
   );
 };
+
+const getLinkType = (projectPostType, { postLocation, deploymentUrl }) => {
+  if (projectPostType === projectPostTypes.post) {
+    const MyLink = ({ children }) => (
+      <LinkS target="_blank" to={postLocation}>
+        {children}
+      </LinkS>
+    )
+    return MyLink;
+  }
+  if (projectPostType === projectPostTypes.deployment) {
+    const MyLink = ({ children }) => (
+      <AS href={deploymentUrl}>
+        {children}
+      </AS>
+    )
+    return MyLink;
+  }
+  return null;
+}

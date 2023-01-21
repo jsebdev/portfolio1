@@ -1,7 +1,23 @@
 import { DeploymentCustomLinks } from 'ui/components/projectsDescriptions/DeploymentCustomLinks';
-import { CHATBOT_NUFI, projectPostTypes, WORK } from 'ui/helpers/constants';
+import { CHATBOT_NUFI_POST, MAIMOVIES_POST, projectPostTypes, WORK } from 'ui/helpers/constants';
 
 export const projectList = [
+  {
+    id: 'Mai Movies',
+    thumbnail: 'mai_movies.jpg',
+    name: 'Mai Movies',
+    projectPostType: projectPostTypes.post,
+    DescriptionComponent: DeploymentCustomLinks,
+    descriptionComponentProps: {
+      descriptionText:
+        'Mobile app that allows you to create and organize lists of movies and tv shows.',
+      customLinks: {
+        "Code": 'https://github.com/jsebdev/MaiMovies',
+      }
+    },
+    postLocation: `/${WORK}/${MAIMOVIES_POST}`,
+    featured: true
+  },
   {
     id: 'port-ecommerce',
     thumbnail: 'ecommerce.png',
@@ -41,7 +57,7 @@ export const projectList = [
     thumbnail: 'chatbot.jpg',
     name: 'Background check chatbot',
     projectPostType: projectPostTypes.post,
-    postLocation: `/${WORK}/${CHATBOT_NUFI}`,
+    postLocation: `/${WORK}/${CHATBOT_NUFI_POST}`,
     descriptionText:
       'Whatsapp chatbot that allows verifying the identity of individuals in under 8 minutes.',
     featured: true

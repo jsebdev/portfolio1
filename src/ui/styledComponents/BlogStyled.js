@@ -36,7 +36,7 @@ export const BlogBlockImageContainerS = styled.div`
   display: flex;
   justify-content: center;
   padding: 1rem;
-  &.maximized {
+  /* &.maximized {
     position: fixed;
     top: 0;
     left: 0;
@@ -44,7 +44,7 @@ export const BlogBlockImageContainerS = styled.div`
     height: 100%;
     max-width: 100%;
     background-color: ${({ theme }) => theme.shadowLayer};
-  }
+  } */
 `;
 
 export const BlogBlockImageS = styled.img`
@@ -52,17 +52,13 @@ export const BlogBlockImageS = styled.img`
   aspect-ratio: 90/175;
   border-radius: 0.6rem;
   object-position: 0% 47%;
-  ${({ maximized, theme }) => maximized ? `
-    max-width: 100%;
-  ` : `
-    max-width: 14rem;
-    box-shadow: ${theme.shadowBoxPosition} ${theme.imageShadow};
-  `}
+  max-width: 14rem;
+  box-shadow: ${({ theme }) => (`${theme.shadowBoxPosition} ${theme.imageShadow};`)}  
 `;
 
 export const StackContainerS = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
 `;

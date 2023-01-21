@@ -14,7 +14,7 @@ export const DeploymentCustomLinks = ({
       <ParagraphS>{descriptionText}</ParagraphS>
       <ButtonsCodeContainerS>
         {Object.keys(customLinks).map(key => (
-          <a href={customLinks[key]} target='_blank' rel='noreferrer'>
+          <a key={key} href={customLinks[key]} target='_blank' rel='noreferrer'>
             <SecondaryButtonS>{key}</SecondaryButtonS>
           </a>
         ))}

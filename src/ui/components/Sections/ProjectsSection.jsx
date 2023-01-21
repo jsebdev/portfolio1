@@ -29,7 +29,7 @@ export const ProjectsSection = ({ featured = false }) => {
         {projectsToShow.map((project, index) => (
           <ProjectItem
             {...project}
-            key={project.name}
+            key={project.id}
             reverse={index % 2}
           ></ProjectItem>
         ))}

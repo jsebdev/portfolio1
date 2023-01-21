@@ -12,7 +12,8 @@ export const GITHUB_LINK = 'https://github.com/jsebdev';
 export const ABOUT = 'about';
 export const WORK = 'work';
 export const CONTACT = 'contact';
-export const CHATBOT_NUFI = 'chatbotNufi';
+export const CHATBOT_NUFI_POST = 'chatbotNufi';
+export const MAIMOVIES_POST = 'MaiMovies'
 export const RESUME = '/resume';
 export const RESUME_FILE = '/files/SebastianCaicedo_cv.pdf'
 
