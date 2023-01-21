@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   ButtonsCodeContainerS,
-  SecondaryButtonS,
 } from 'ui/styledComponents/ButtonsStyled';
 import { ParagraphS } from 'ui/styledComponents/paragraphStyled';
 
@@ -13,9 +12,9 @@ export const DeploymentCustomLinks = ({
     <div>
       <ParagraphS>{descriptionText}</ParagraphS>
       <ButtonsCodeContainerS>
-        {Object.keys(customLinks).map(key => (
-          <a key={key} href={customLinks[key]} target='_blank' rel='noreferrer'>
-            <SecondaryButtonS>{key}</SecondaryButtonS>
+        {customLinks.map((link, index) => (
+          <a key={index} href={link.href} target='_blank' rel='noreferrer'>
+            {link.button}
           </a>
         ))}
       </ButtonsCodeContainerS>

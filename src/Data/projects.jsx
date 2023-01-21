@@ -1,5 +1,6 @@
 import { DeploymentCustomLinks } from 'ui/components/projectsDescriptions/DeploymentCustomLinks';
 import { CHATBOT_NUFI_POST, MAIMOVIES_POST, projectPostTypes, WORK } from 'ui/helpers/constants';
+import { GooglePlayButtonS, SecondaryButtonS } from 'ui/styledComponents/ButtonsStyled';
 
 export const projectList = [
   {
@@ -11,9 +12,16 @@ export const projectList = [
     descriptionComponentProps: {
       descriptionText:
         'Mobile app that allows you to create and organize lists of movies and tv shows.',
-      customLinks: {
-        "Code": 'https://github.com/jsebdev/MaiMovies',
-      }
+      customLinks: [
+        {
+          href: 'https://github.com/jsebdev/MaiMovies',
+          button: <SecondaryButtonS>Code</SecondaryButtonS>
+        },
+        {
+          href: "soon-to-be-available",
+          button: <GooglePlayButtonS />
+        }
+      ]
     },
     postLocation: `/${WORK}/${MAIMOVIES_POST}`,
     featured: true
@@ -27,10 +35,16 @@ export const projectList = [
     descriptionComponentProps: {
       descriptionText:
         'E-commerce website for massive online store. It is a full stack project, built with Nextjs, Redux, Django, Graphql, Postgres.',
-      customLinks: {
-        "Front code": 'https://github.com/jsebdev/E-commerce-graphql-nextjs',
-        "Back code": 'https://github.com/jsebdev/E-commerce-graphql-django',
-      }
+      customLinks: [
+        {
+          href: 'https://github.com/jsebdev/E-commerce-graphql-nextjs',
+          button: <SecondaryButtonS>Front Code</SecondaryButtonS>
+        },
+        {
+          href: 'https://github.com/jsebdev/E-commerce-graphql-django',
+          button: <SecondaryButtonS>Back Code</SecondaryButtonS>
+        }
+      ]
     },
     deploymentUrl: 'https://port-ecommerce.shop/',
     featured: true
@@ -44,10 +58,17 @@ export const projectList = [
     descriptionComponentProps: {
       descriptionText:
         'Simulating booking experience with Next.js and Redux. Avoid bookings overlapping and theme responds to machine preference changes.',
-      customLinks: {
-        Code: "https://github.com/jsebdev/booking_experience",
-        Video: "https://youtu.be/LWFh4IbhSmI"
-      }
+      customLinks: [
+        {
+          href: "https://github.com/jsebdev/booking_experience",
+          button: <SecondaryButtonS>Code</SecondaryButtonS>
+        },
+        {
+
+          href: "https://youtu.be/LWFh4IbhSmI",
+          button: <SecondaryButtonS>Video</SecondaryButtonS>
+        }
+      ]
     },
     deploymentUrl: 'https://booking-experience.netlify.app/',
     featured: true
@@ -71,10 +92,16 @@ export const projectList = [
     descriptionComponentProps: {
       descriptionText:
         'Web app for handling orders creation, deletion, shipping and searches for retail companies',
-      customLinks: {
-        "Front code": 'https://github.com/jsebdev/Order_Manager_frontend',
-        "Back code": 'https://github.com/jsebdev/Order_Manager_api',
-      }
+      customLinks: [
+        {
+          href: 'https://github.com/jsebdev/Order_Manager_frontend',
+          button: <SecondaryButtonS>Front Code</SecondaryButtonS>
+        },
+        {
+          href: 'https://github.com/jsebdev/Order_Manager_api',
+          button: <SecondaryButtonS>Back Code</SecondaryButtonS>
+        }
+      ]
     },
     deploymentUrl: 'https://jsebdev.github.io/Order_Manager_frontend',
     featured: false

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { mediaQueries } from 'ui/helpers/measures';
+import googlePlayImage from 'images/store_buttons/google_play.png'
 
 const ButtonS = styled.button`
   cursor: pointer;
@@ -44,13 +45,27 @@ export const SecondaryButtonS = styled(ButtonS)`
 export const ButtonsCodeContainerS = styled.div`
   display: flex;
   justify-content: space-around;
+  align-items: center;
   padding: 0.5rem 20% 1rem;
   @media (${mediaQueries.tablet}) {
     justify-content: flex-start;
   }
-  & button {
+  & button, div {
     @media (${mediaQueries.tablet}) {
       margin-left: 1rem;
     }
   }
 `;
+
+export const GooglePlayButtonS = styled.div`
+  background-image: url(${googlePlayImage});
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  width: 100px;
+  height: 40px;
+  transition: 0.4s;
+  &:hover{
+    transform: scale(1.05);
+  }
+`

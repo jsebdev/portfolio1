@@ -26,7 +26,12 @@ export const errors = {
   unkonwnError: 'Unknown error',
 }
 
+//Types
 export const projectPostTypes = {
   post: 'post',
   deployment: 'deployment',
+}
+export const projectButtonTypes = {
+  googlePlay: "google-play",
+  appStore: "app-store",
 }
