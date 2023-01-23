@@ -1,12 +1,12 @@
 import { DeploymentCustomLinks } from 'ui/components/projectsDescriptions/DeploymentCustomLinks';
 import { CHATBOT_NUFI_POST, MAIMOVIES_POST, projectPostTypes, WORK } from 'ui/helpers/constants';
-import { GooglePlayButtonS, SecondaryButtonS } from 'ui/styledComponents/ButtonsStyled';
+import { SecondaryButtonS } from 'ui/styledComponents/ButtonsStyled';
 
 export const projectList = [
   {
-    id: 'Mai Movies',
+    id: 'MaiMovies',
     thumbnail: 'mai_movies.jpg',
-    name: 'Mai Movies',
+    name: 'MaiMovies',
     projectPostType: projectPostTypes.post,
     DescriptionComponent: DeploymentCustomLinks,
     descriptionComponentProps: {
@@ -17,10 +17,10 @@ export const projectList = [
           href: 'https://github.com/jsebdev/MaiMovies',
           button: <SecondaryButtonS>Code</SecondaryButtonS>
         },
-        {
-          href: "soon-to-be-available",
-          button: <GooglePlayButtonS />
-        }
+        // {
+        //   href: "soon-to-be-available",
+        //   button: <GooglePlayButtonS />
+        // }
       ]
     },
     postLocation: `/${WORK}/${MAIMOVIES_POST}`,

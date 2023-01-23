@@ -10,6 +10,7 @@ export const MainTitleS = styled.h1`
   color: ${titleColor};
   ${(props) => shadowText(props)(titleShadowColor(props))}
   text-align: center;
+  flex-grow: 1;
 `;
 
 export const TitleS = styled.h2`

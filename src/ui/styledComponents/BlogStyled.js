@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import { mediaQueries } from "ui/helpers/measures";
 
+export const BlogHeaderS = styled.div`
+  display: flex;
+`
+
 export const BlogFrontImage = styled.div`
   background: url(${props => props.image}) 50% 45% no-repeat;
   background-size: cover;
@@ -62,3 +66,8 @@ export const StackContainerS = styled.div`
   justify-content: center;
   flex-wrap: wrap;
 `;
+
+export const VideoBlogS = styled.div`
+  display: flex;
+  justify-content: center;
+`
