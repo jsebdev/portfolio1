@@ -12,7 +12,6 @@ export const ChatbotNufi = () => {
   return (
     <>
       <Helmet>
-        <meta property="og:image" content="%PUBLIC_URL%/images/front_image_chatbot.jpg" />
         <title>Chatbot @ Nufi</title>
       </Helmet>
       <BlogFrontImage image="/images/front_image_chatbot.jpg" />

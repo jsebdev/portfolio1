@@ -14,8 +14,6 @@ export const MaiMoviesPost = () => {
   return (
     <>
       <Helmet>
-        <meta property="og:image" content="/images/movies.jpg" />
-        {/* <meta property="og:image" content="%PUBLIC_URL%/profile.jpg" /> */}
         <title>MaiMovies</title>
       </Helmet>
       <BlogFrontImage image="/images/movies.jpg" />
