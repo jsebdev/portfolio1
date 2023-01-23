@@ -70,4 +70,5 @@ export const StackContainerS = styled.div`
 export const VideoBlogS = styled.div`
   display: flex;
   justify-content: center;
+  margin-bottom: 3rem;
 `

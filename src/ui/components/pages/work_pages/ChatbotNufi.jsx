@@ -5,13 +5,17 @@ import { BlogBlockS, BlogBlockTextS, BlogFrontImage, StackContainerS } from 'ui/
 import { BigStoryChatbotS, ParagraphS } from 'ui/styledComponents/paragraphStyled'
 import { SectionHeaderS, TitledSectionS } from 'ui/styledComponents/SectionStyled'
 import { MainTitleS, SectionTitleS } from 'ui/styledComponents/TitleStyled'
-import frontImage from 'images/chatbotNufi/front_image_chatbot.jpg'
 import { BlogImage } from 'ui/components/BlogImage'
+import { Helmet } from 'react-helmet'
 
 export const ChatbotNufi = () => {
   return (
     <>
-      <BlogFrontImage image={frontImage} />
+      <Helmet>
+        <meta property="og:image" content="%PUBLIC_URL%/images/front_image_chatbot.jpg" />
+        <title>Chatbot @ Nufi</title>
+      </Helmet>
+      <BlogFrontImage image="/images/front_image_chatbot.jpg" />
       <MainTitleS themeColor='sectionTitle'>Background Check Whatsapp Chatbot @ Nufi</MainTitleS>
       <BlogBlockS>
         <ParagraphS>Whatsapp chatbot that allows verifying the identity of individuals in under 8 minutes.</ParagraphS>

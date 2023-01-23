@@ -15,6 +15,7 @@ import { darkTheme, lightTheme, themesNames } from 'ui/helpers/themes';
 import { ChatbotNufi } from 'ui/components/pages/work_pages/ChatbotNufi';
 import { ResumeRedirect } from 'ui/components/resumeRedirect';
 import { MaiMoviesPost } from 'ui/components/pages/work_pages/MaiMovies';
+import { Helmet } from 'react-helmet';
 
 function App() {
   const themeName = useSelector((state) => state.theme.value);
@@ -23,6 +24,9 @@ function App() {
     <ThemeProvider
       theme={themeName === themesNames.light ? lightTheme : darkTheme}
     >
+      <Helmet>
+        <meta property="og:image" content="%PUBLIC_URL%/profile.jpg" />
+      </Helmet>
       <GlobalStyles />
       <Routes>
         <Route path='/' element={<Page />}>
