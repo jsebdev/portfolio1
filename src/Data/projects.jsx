@@ -5,7 +5,7 @@ import { SecondaryButtonS } from 'ui/styledComponents/ButtonsStyled';
 export const projectList = [
   {
     id: 'MaiMovies',
-    thumbnail: 'mai_movies.jpg',
+    thumbnail: 'mai_movies.jpeg',
     name: 'MaiMovies',
     projectPostType: projectPostTypes.post,
     DescriptionComponent: DeploymentCustomLinks,
