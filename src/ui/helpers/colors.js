@@ -11,5 +11,5 @@ export const themeColors = {
   lightPurple: '#EBB0FF',
   white: '#FFFFFF',
   black: '#000000',
-  errorBacground: '#ff878733'
+  errorBackground: '#ff878733'
 };

@@ -15,6 +15,8 @@ export const alphaShadowLayer = {
   darkTheme: '77',
 };
 
+const filterShadowPosition = "2px 2px 0px"
+
 export const lightTheme = {
   name: themesNames.light,
   body: themeColors.white,
@@ -50,12 +52,12 @@ export const lightTheme = {
   inputPlaceholder: themeColors.gray,
   socialName: themeColors.green,
   separatorBorder: themeColors.gray,
-  hola: 'adios',
   secondaryButton0: themeColors.black,
   secondaryButton1: themeColors.white,
   spinner: themeColors.green,
   spinnerBackground: `${themeColors.white}99`,
-  errorBacground: themeColors.errorBacground,
+  errorBackground: themeColors.errorBackground,
+  filterShadowPosition: filterShadowPosition
 };
 
 export const darkTheme = {
@@ -98,5 +100,6 @@ export const darkTheme = {
   secondaryButton1: themeColors.black,
   spinner: themeColors.green,
   spinnerBackground: `${themeColors.darkBlue}99`,
-  errorBacground: themeColors.errorBacground,
+  errorBackground: themeColors.errorBackground,
+  filterShadowPosition: filterShadowPosition
 };

@@ -1,6 +1,7 @@
 import React from 'react';
 import {
-  ButtonsCodeContainerS,
+  ButtonContainerS,
+  ButtonsContainerS,
 } from 'ui/styledComponents/ButtonsStyled';
 import { ParagraphS } from 'ui/styledComponents/paragraphStyled';
 
@@ -11,13 +12,13 @@ export const DeploymentCustomLinks = ({
   return (
     <div>
       <ParagraphS>{descriptionText}</ParagraphS>
-      <ButtonsCodeContainerS>
+      <ButtonsContainerS>
         {customLinks.map((link, index) => (
-          <a key={index} href={link.href} target='_blank' rel='noreferrer'>
+          <ButtonContainerS key={index} href={link.href} target='_blank' rel='noreferrer'>
             {link.button}
-          </a>
+          </ButtonContainerS>
         ))}
-      </ButtonsCodeContainerS>
+      </ButtonsContainerS>
     </div>
   );
 };

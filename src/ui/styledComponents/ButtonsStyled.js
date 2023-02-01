@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 import { mediaQueries } from 'ui/helpers/measures';
-import googlePlayImage from 'images/store_buttons/google_play.png'
+import GooglePlayImage from 'images/buttons/google_play.png'
+import YoutubePlayImage from 'images/buttons/YouTube_play_button.png'
 
 const ButtonS = styled.button`
   cursor: pointer;
+  text-decoration: none;
 `;
 
 export const MainButtonS = styled(ButtonS)`
@@ -42,7 +44,7 @@ export const SecondaryButtonS = styled(ButtonS)`
   }
 `;
 
-export const ButtonsCodeContainerS = styled.div`
+export const ButtonsContainerS = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -57,15 +59,30 @@ export const ButtonsCodeContainerS = styled.div`
   }
 `;
 
-export const GooglePlayButtonS = styled.div`
-  background-image: url(${googlePlayImage});
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+export const ButtonContainerS = styled.a`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+`
+
+export const CustomButton = styled.img`
   width: 100px;
-  height: 40px;
+  height: 35px;
   transition: 0.4s;
+  /* box-shadow: ${(props) =>
+    `${props.theme.shadowBoxPosition} ${props.theme.imageShadow}`}; */
+  filter: drop-shadow(${({ theme }) => `${theme.filterShadowPosition} ${theme.imageShadow}`});
+  object-fit: contain;
   &:hover{
     transform: scale(1.05);
   }
+`
+
+export const GooglePlayButtonS = styled(CustomButton)`
+  background-image: url(${GooglePlayImage});
+`
+
+export const YoutubePlayButtonS = styled(CustomButton)`
+  background-image: url(${YoutubePlayImage});
 `

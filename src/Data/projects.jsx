@@ -1,6 +1,6 @@
 import { DeploymentCustomLinks } from 'ui/components/projectsDescriptions/DeploymentCustomLinks';
 import { CHATBOT_NUFI_POST, MAIMOVIES_POST, projectPostTypes, WORK } from 'ui/helpers/constants';
-import { SecondaryButtonS } from 'ui/styledComponents/ButtonsStyled';
+import { CustomButton, SecondaryButtonS } from 'ui/styledComponents/ButtonsStyled';
 
 export const projectList = [
   {
@@ -17,10 +17,14 @@ export const projectList = [
           href: 'https://github.com/jsebdev/MaiMovies',
           button: <SecondaryButtonS>Code</SecondaryButtonS>
         },
-        // {
-        //   href: "soon-to-be-available",
-        //   button: <GooglePlayButtonS />
-        // }
+        {
+          href: "https://youtu.be/-qyklmNkhMY",
+          button: <CustomButton src={require('images/buttons/YouTube_play_button.png')} />
+        },
+        {
+          href: "https://play.google.com/store/apps/details?id=com.jsebdev.MaiMovies&hl=en-US&ah=h9_7LNYgqYBb0TJMJ00Kh4ee1kU",
+          button: <CustomButton src={require('images/buttons/google_play.png')} />
+        }
       ]
     },
     postLocation: `/${WORK}/${MAIMOVIES_POST}`,
@@ -64,9 +68,8 @@ export const projectList = [
           button: <SecondaryButtonS>Code</SecondaryButtonS>
         },
         {
-
           href: "https://youtu.be/LWFh4IbhSmI",
-          button: <SecondaryButtonS>Video</SecondaryButtonS>
+          button: <CustomButton src={require('images/buttons/YouTube_play_button.png')} />
         }
       ]
     },

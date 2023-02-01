@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  ButtonsCodeContainerS,
+  ButtonsContainerS,
   SecondaryButtonS,
 } from 'ui/styledComponents/ButtonsStyled';
 import { CenteredSpanS } from 'ui/styledComponents/helpComponentsStyled';
@@ -14,7 +14,7 @@ export const DescriptionDeploymentFullStack = ({
   return (
     <div>
       <ParagraphS>{descriptionText}</ParagraphS>
-      <ButtonsCodeContainerS>
+      <ButtonsContainerS>
         <CenteredSpanS>
           <b>Code:</b>
         </CenteredSpanS>
@@ -24,7 +24,7 @@ export const DescriptionDeploymentFullStack = ({
         <a href={backUrl} target='_blank' rel='noreferrer'>
           <SecondaryButtonS>Back</SecondaryButtonS>
         </a>
-      </ButtonsCodeContainerS>
+      </ButtonsContainerS>
     </div>
   );
 };

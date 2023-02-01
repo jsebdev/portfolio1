@@ -5,10 +5,10 @@ import { BlogBlockS, BlogBlockTextS, BlogFrontImage, BlogHeaderS, StackContainer
 import { BigStoryChatbotS, ParagraphS } from 'ui/styledComponents/paragraphStyled'
 import { SectionHeaderS, TitledSectionS } from 'ui/styledComponents/SectionStyled'
 import { MainTitleS, SectionTitleS } from 'ui/styledComponents/TitleStyled'
-// import frontImage from 'images/MaiMovies/movies.jpg'
 import { BlogImage } from 'ui/components/BlogImage'
-// import { GooglePlayButtonS } from 'ui/styledComponents/ButtonsStyled'
 import { Helmet } from 'react-helmet'
+import { CustomButton } from 'ui/styledComponents/ButtonsStyled'
+import { ButtonContainerS } from 'ui/styledComponents/ButtonsStyled'
 
 export const MaiMoviesPost = () => {
   return (
@@ -19,7 +19,9 @@ export const MaiMoviesPost = () => {
       <BlogFrontImage image="/images/movies.jpg" />
       <BlogHeaderS>
         <MainTitleS themeColor='sectionTitle'>MaiMovies</MainTitleS>
-        {/* <GooglePlayButtonS /> */}
+        <ButtonContainerS href="https://play.google.com/store/apps/details?id=com.jsebdev.MaiMovies&hl=en-US&ah=h9_7LNYgqYBb0TJMJ00Kh4ee1kU" target='_blank' rel='noreferrer'>
+          <CustomButton src={require('images/buttons/google_play.png')} />
+        </ButtonContainerS>
       </BlogHeaderS>
       <BlogBlockS>
         <ParagraphS>Mobile App to create, edit and manage your own lists of movies and tv shows.</ParagraphS>
@@ -35,6 +37,9 @@ export const MaiMoviesPost = () => {
           <StackItem href="https://reactnative.dev/" name="React Native" icon={require('images/logos/React.png')} />
           <StackItem href="https://mobx.js.org/README.html" name="MobX" icon={require('images/logos/mobx.png')} />
         </StackContainerS>
+        <ParagraphS>
+          See the code in github <AS href="https://github.com/jsebdev/MaiMovies" textDecoration='underline'>here</AS>.
+        </ParagraphS>
       </TitledSectionS>
       <TitledSectionS>
         <SectionHeaderS>
