@@ -4,6 +4,25 @@ import { CustomButton, SecondaryButtonS } from 'ui/styledComponents/ButtonsStyle
 
 export const projectList = [
   {
+    id: 'stock_predictor',
+    thumbnail: 'apple_stock_predictor.png',
+    name: 'Apple Stock Predictor LSTM Model',
+    projectPostType: projectPostTypes.deployment,
+    DescriptionComponent: DeploymentCustomLinks,
+    descriptionComponentProps: {
+      descriptionText:
+        'Model that was trained to predict Apple stock prices. The model takes as input the last 500 daily candles of Apple stocks data and outputs the predicted candle for the next day',
+      customLinks: [
+        {
+          href: 'https://huggingface.co/jsebdev/apple_stock_predictor',
+          button: <SecondaryButtonS>Model</SecondaryButtonS>
+        },
+      ]
+    },
+    featured: true,
+    deploymentUrl: 'https://huggingface.co/spaces/jsebdev/stock_predictor',
+  },
+  {
     id: 'MaiMovies',
     thumbnail: 'mai_movies.jpeg',
     name: 'MaiMovies',
