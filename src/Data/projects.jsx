@@ -4,6 +4,29 @@ import { CustomButton, SecondaryButtonS } from 'ui/styledComponents/ButtonsStyle
 
 export const projectList = [
   {
+    id: 't_ch_logistic_regression',
+    thumbnail: 'titanic_challenge.png',
+    name: 'Logistic Regression Titanic Challenge',
+    projectPostType: projectPostTypes.deployment,
+    DescriptionComponent: DeploymentCustomLinks,
+    descriptionComponentProps: {
+      descriptionText:
+        'Model to predict if a passenger survived the Titanic shipwreck. The model takes as input the passenger information and outputs a probability of survival.',
+      customLinks: [
+        {
+          href: 'https://github.com/jsebdev/Titanic-Challenge-Logistic-Regression',
+          button: <SecondaryButtonS>Repo</SecondaryButtonS>
+        },
+        {
+          href: 'https://github.com/jsebdev/Titanic-Challenge-Logistic-Regression/blob/main/logistic_regression.ipynb',
+          button: <SecondaryButtonS>Notebook</SecondaryButtonS>
+        },
+      ]
+    },
+    featured: true,
+    deploymentUrl: 'https://github.com/jsebdev/Titanic-Challenge-Logistic-Regression',
+  },
+  {
     id: 'stock_predictor',
     thumbnail: 'apple_stock_predictor.png',
     name: 'Apple Stock Predictor LSTM Model',
@@ -47,7 +70,7 @@ export const projectList = [
       ]
     },
     postLocation: `/${WORK}/${MAIMOVIES_POST}`,
-    featured: true
+    featured: false
   },
   {
     id: 'port-ecommerce',
@@ -93,7 +116,7 @@ export const projectList = [
       ]
     },
     deploymentUrl: 'https://booking-experience.netlify.app/',
-    featured: true
+    featured: false
   },
   {
     id: 'nufi_chatbot',
@@ -107,7 +130,7 @@ export const projectList = [
   },
   {
     id: 'order_manager',
-    thumbnail: 'order_manager.PNG',
+    thumbnail: 'order_manager.png',
     name: 'Order Manager',
     projectPostType: projectPostTypes.deployment,
     DescriptionComponent: DeploymentCustomLinks,
