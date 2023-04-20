@@ -27,22 +27,33 @@ export const MainButtonS = styled(ButtonS)`
 `;
 
 export const SecondaryButtonS = styled(ButtonS)`
-  background: transparent;
+  color: ${({ theme }) => theme.secondaryButton0};
+  background: ${({ theme }) => theme.secondaryButton1};
   border-radius: 1rem;
   padding: 0.3rem 0.6rem;
   border: 2px solid ${(props) => props.theme.secondaryButton0};
   font-weight: bold;
-  color: transparent;
-  background: ${({ theme }) => `linear-gradient(45deg, ${theme.secondaryButton1} 50%, ${theme.secondaryButton0} 0) var(--p, 100%) / 250%
-      no-repeat,
-    linear-gradient(45deg, ${theme.secondaryButton0} 50%, ${theme.secondaryButton1} 0) var(--p, 100%) / 250% no-repeat`};
-  -webkit-background-clip: text, padding-box;
-  background-clip: text, padding-box;
-  transition: 0.4s;
-  &:hover {
-    --p: 0%;
+  overflow: hidden;
+  position: relative;
+  &:after {
+    background: ${({ theme }) => theme.secondaryButton0};
+    content: "";
+    height: 155px;
+    left: -75px;
+    opacity: ${({ theme }) => theme.name === 'dark' ? '0.5' : '0.2'};
+    position: absolute;
+    top: -50px;
+    transform: rotate(35deg);
+    transition: all 400ms;
+    width: 50px;
+    z - index: -10;
   }
-`;
+  &:hover{
+    &:after {
+    left: 120%;
+    }
+  }
+`
 
 export const ButtonsContainerS = styled.div`
   display: flex;
