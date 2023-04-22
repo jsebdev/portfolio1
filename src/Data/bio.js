@@ -1,17 +1,20 @@
 const bioText = `
-Hi! I'm Sebastian Caicedo, a curious and ever-learning software developer from Colombia. 👋
+Hi! I'm Sebastian Caicedo, a curious and ever-learning ML developer from Colombia. 👋
 
-I'm passionate about developing good quality software and finding the most optime solutions to all kinds of problems.
+From regressions, and predictions to unsupervised, and reinforcement learning...
+Data is my passion!! 📊 Especially when it comes to
+uncovering insights from complex datasets. 🤖 
 
-I'm obsessed with front-end and back-end development, particularly javascript and python frameworks like React, React-native, Nextjs, and Django. 💻
+I started my career as a full-stack developer, but I quickly realized what I am most passionate about when I started 
+doing data science projects for fun. 📈
 
-I've worked as a full-stack developer in the fintech and pharmaceutical industry developing graphical features, restful and graphQl APIs, WhatsApp chatbots, and web scraping.  📈
+My goal is to become a use my skills on projects that help people and the environment. 🌎
 
-I consider myself a black hole of information <I mean, I like learning new things a lot>, so when I'm not working, I usually watch videos or tutorials, learn a new language, or work on a side project to expand my skills. Also, now and then, I do virtual math lessons. 🤓
+I consider myself a black hole of information,
+so when I'm not working, I'm usually watching educative videos, learning a new language, or working
+on a side project to expand my skills. Also, now and then, I do math and coding lessons. 🤓
 
-Oh Right! I was born in Cali! So I sure love to dance salsa and move the body! 💃🏼
-
-
+Oh Right! and I was born in Cali! So I'm a salsa dancer 💃 (at least in the shower), and I'm a ping-pong player at night 🏓.
 `
 
-export const bioParagraphs = bioText.split('\n').filter(x => x.trim().length > 0)
+export const bioParagraphs = bioText.split('\n\n').map(x => x.replace('\n', ' ')).filter(x => x.trim().length > 0)

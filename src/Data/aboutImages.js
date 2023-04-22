@@ -1,5 +1,5 @@
-export const aboutImages = [
-  {
+export const aboutImages = {
+  hitch: {
     image: 'hitchhiking.jpg',
     direction: 'column-reverse',
     changeToRow: false,
@@ -9,7 +9,7 @@ export const aboutImages = [
     description: 'Hitchhiking in Orlando',
     maxWidth: '700px',
   },
-  {
+  bubba: {
     image: 'bubba_gump.jpg',
     direction: 'column',
     directionTablet: 'row',
@@ -19,7 +19,7 @@ export const aboutImages = [
     description: 'One of my favorite movies is "Forrest Gump"',
     maxWidth: '650px',
   },
-  {
+  cartagena_zoe: {
     image: 'cartagena_Zoe.jpg',
     direction: 'column-reverse',
     directionTablet: 'row',
@@ -29,7 +29,7 @@ export const aboutImages = [
     description: 'Night out in Cartagena',
     maxWidth: '650px',
   },
-  {
+  cartagena: {
     image: 'cartagena.jpg',
     direction: 'column-reverse',
     directionTablet: 'row',
@@ -39,17 +39,17 @@ export const aboutImages = [
     description: 'Random cool people I met in Cartagena',
     maxWidth: '550px',
   },
-  {
-    image: 'Dereck.jpg',
-    direction: 'column-reverse',
-    directionTablet: 'row',
-    changeToRow: false,
-    aspectRatio: 5 / 3,
-    width: '100%',
-    description: 'Awesome Photo session with my dog Dereck',
-    maxWidth: '550px',
-  },
-  {
+  // {
+  //   image: 'Dereck.jpg',
+  //   direction: 'column-reverse',
+  //   directionTablet: 'row',
+  //   changeToRow: false,
+  //   aspectRatio: 5 / 3,
+  //   width: '100%',
+  //   description: 'Awesome Photo session with my dog Dereck',
+  // maxWidth: '550px',
+  // },
+  gay1: {
     image: 'gay_parade.jpg',
     direction: 'column-reverse',
     directionTablet: 'row',
@@ -60,7 +60,7 @@ export const aboutImages = [
     description: 'Supporting LGBTQ rights in Cali Colombia',
     maxWidth: '550px',
   },
-  {
+  gay2: {
     image: 'gay_parade_2.jpg',
     direction: 'column-reverse',
     directionTablet: 'row',
@@ -70,7 +70,7 @@ export const aboutImages = [
     description: 'Supporting LGBTQ rights in Cali Colombia',
     maxWidth: '550px',
   },
-  {
+  museum: {
     image: 'museum_new_york.jpg',
     direction: 'column-reverse',
     aspectRatio: 6 / 3,
@@ -80,7 +80,7 @@ export const aboutImages = [
     description: 'At the American Museum of Natural History in New York',
     maxWidth: '550px',
   },
-  {
+  museum2: {
     image: 'museum_new_york_2.jpg',
     direction: 'column-reverse',
     aspectRatio: 934 / 700,
@@ -90,7 +90,7 @@ export const aboutImages = [
     description: 'At the American Museum of Natural History in New York',
     maxWidth: '550px',
   },
-  {
+  purace: {
     image: 'purace.jpg',
     direction: 'column-reverse',
     aspectRatio: 9 / 3,
@@ -100,7 +100,7 @@ export const aboutImages = [
     description: 'Climbing Purace volcano in Colombia',
     maxWidth: '800px',
   },
-  {
+  capitol: {
     image: 'us_capitol.jpg',
     direction: 'column-reverse',
     aspectRatio: 10 / 7,
@@ -110,8 +110,7 @@ export const aboutImages = [
     description: 'At the US Capitol in Washington DC',
     maxWidth: '500px',
   },
-  {
-    number: 11,
+  aiport: {
     image: 'airport.jpg',
     direction: 'column-reverse',
     aspectRatio: 10 / 7,
@@ -121,19 +120,17 @@ export const aboutImages = [
     maxWidth: '500px',
     description: 'Spending the night with people I met at the airport',
   },
-  {
-    number: 12,
+  train: {
     image: 'train.jpeg',
     direction: 'column',
     aspectRatio: 5 / 7,
     changeToRow: true,
     directionTablet: 'row',
     width: '100%',
-    description: 'Taking the train is one of my favorite ways to travel',
+    description: 'Getting along with beautiful Italy\'s trains',
     maxWidth: '350px',
   },
-  {
-    number: 13,
+  venice: {
     image: 'venice.jpeg',
     direction: 'column-reverse',
     aspectRatio: 10 / 7,
@@ -143,8 +140,7 @@ export const aboutImages = [
     maxWidth: '500px',
     description: 'Getting to know people in venice',
   },
-  {
-    number: 14,
+  water: {
     image: 'water.jpeg',
     direction: 'column-reverse',
     aspectRatio: 11 / 7,
@@ -154,8 +150,7 @@ export const aboutImages = [
     maxWidth: '500px',
     description: 'Splashing around next to the Alps',
   },
-  {
-    number: 15,
+  working_traveling: {
     image: 'working_traveling.jpeg',
     direction: 'column',
     aspectRatio: 5 / 7,
@@ -165,4 +160,4 @@ export const aboutImages = [
     description: "Working while traveling in my host's house",
     maxWidth: '350px',
   },
-];
+};

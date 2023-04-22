@@ -14,12 +14,13 @@ import { ParagraphS } from '../../styledComponents/paragraphStyled';
 import { SpanDescriptorS } from '../../styledComponents/imageDescriptorStyled';
 import { aboutImages } from '../../../Data/aboutImages';
 import { bioParagraphs } from 'Data/bio';
+import { LinkS } from 'ui/styledComponents/LinkStyled';
 
 export const AboutSection = () => {
-  const image = useMemo(
-    () => aboutImages[Math.floor(Math.random() * aboutImages.length)],
-    [],
-  );
+  const image = useMemo(() => {
+    const images = Object.values(aboutImages);
+    return images[Math.floor(Math.random() * images.length)]
+  }, []);
 
   return (
     <TitledSectionS>
@@ -32,7 +33,7 @@ export const AboutSection = () => {
             <ParagraphS key={index}>{paragraph}</ParagraphS>
           ))}
           <ParagraphS>
-            Please don't hesitate to contact me. I'm always open to having a chat.
+            Please don't hesitate to <LinkS to='/contact'><u>contact me</u></LinkS>. I'm always open to having a chat.
           </ParagraphS>
         </AboutText>
         <AboutImageContainerS changeToRow={image.changeToRow}>

@@ -20,7 +20,7 @@ export const HelloSection = () => {
           My name is <BigNameS>Sebastian Caicedo</BigNameS>
         </TitleS>
         <ParagraphS>
-          Curious and ever learning Full-Stack Software developer from Colombia
+          Curious and creative Data Analyst and Machine Learning Developer from Colombia.
         </ParagraphS>
       </HiMessagesS>
       <ProfileImageContainerS>

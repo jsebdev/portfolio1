@@ -33,8 +33,8 @@ export const Contact = () => {
         </SpanDescriptorS>
       </ContactImageContainerS>
       <div>
-        <ParagraphS>You can always reach me, I’ll be happy to answer</ParagraphS>
-        <ParagraphS>you <AS href='https://nohello.club/' textDecoration='underline'> don’t have to say Hello</AS>😉</ParagraphS>
+        <ParagraphS>You can always reach me, I’ll be happy to answer.</ParagraphS>
+        <ParagraphS>And you <AS href='https://nohello.club/' textDecoration='underline'> don’t have to say Hello</AS>. 😉</ParagraphS>
         <ContactFormS onSubmit={sendEmail} ref={formRef}>
           <InputFormS type='text' placeholder='Name' name='user_name' />
           <InputFormS type='text' placeholder='Email' name='user_email' />
