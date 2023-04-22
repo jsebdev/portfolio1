@@ -46,6 +46,29 @@ export const projectList = [
     deploymentUrl: 'https://huggingface.co/spaces/jsebdev/stock_predictor',
   },
   {
+    id: 'port-ecommerce',
+    thumbnail: 'ecommerce.png',
+    name: 'Port-ecommerce',
+    projectPostType: projectPostTypes.deployment,
+    DescriptionComponent: DeploymentCustomLinks,
+    descriptionComponentProps: {
+      descriptionText:
+        'E-commerce website for massive online store. It is a full stack project, built with Nextjs, Redux, Django, Graphql, Postgres.',
+      customLinks: [
+        {
+          href: 'https://github.com/jsebdev/E-commerce-graphql-nextjs',
+          button: <SecondaryButtonS>Front Code</SecondaryButtonS>
+        },
+        {
+          href: 'https://github.com/jsebdev/E-commerce-graphql-django',
+          button: <SecondaryButtonS>Back Code</SecondaryButtonS>
+        }
+      ]
+    },
+    deploymentUrl: 'https://port-ecommerce.shop/',
+    featured: true
+  },
+  {
     id: 'MaiMovies',
     thumbnail: 'mai_movies.jpeg',
     name: 'MaiMovies',
@@ -71,29 +94,6 @@ export const projectList = [
     },
     postLocation: `/${WORK}/${MAIMOVIES_POST}`,
     featured: false
-  },
-  {
-    id: 'port-ecommerce',
-    thumbnail: 'ecommerce.png',
-    name: 'Port-ecommerce',
-    projectPostType: projectPostTypes.deployment,
-    DescriptionComponent: DeploymentCustomLinks,
-    descriptionComponentProps: {
-      descriptionText:
-        'E-commerce website for massive online store. It is a full stack project, built with Nextjs, Redux, Django, Graphql, Postgres.',
-      customLinks: [
-        {
-          href: 'https://github.com/jsebdev/E-commerce-graphql-nextjs',
-          button: <SecondaryButtonS>Front Code</SecondaryButtonS>
-        },
-        {
-          href: 'https://github.com/jsebdev/E-commerce-graphql-django',
-          button: <SecondaryButtonS>Back Code</SecondaryButtonS>
-        }
-      ]
-    },
-    deploymentUrl: 'https://port-ecommerce.shop/',
-    featured: true
   },
   {
     id: 'booking-experience',
@@ -126,7 +126,7 @@ export const projectList = [
     postLocation: `/${WORK}/${CHATBOT_NUFI_POST}`,
     descriptionText:
       'Whatsapp chatbot that allows verifying the identity of individuals in under 8 minutes.',
-    featured: true
+    featured: false
   },
   {
     id: 'order_manager',
