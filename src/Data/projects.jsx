@@ -53,7 +53,8 @@ export const projectList = [
     DescriptionComponent: DeploymentCustomLinks,
     descriptionComponentProps: {
       descriptionText:
-        'E-commerce website for massive online store. It is a full stack project, built with Nextjs, Redux, Django, Graphql, Postgres.',
+        `E-commerce website for massive online store. It is a full stack project, built with Nextjs, Redux, Django, Graphql, Postgres.
+        (backend not working anymore, ups!)`,
       customLinks: [
         {
           href: 'https://github.com/jsebdev/E-commerce-graphql-nextjs',
